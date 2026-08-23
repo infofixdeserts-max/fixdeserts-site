@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resources — Deserts to Grasslands</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<style>
+:root{
+  --brand-green:#1a9f66; --brand-green-bright:#0cc373; --brand-green-light:#8ff48e;
+  --brand-blue:#31a7ed; --brand-cyan:#52b5d4; --brand-yellow:#fdf650;
+  --brand-coral:#e07b5f; --brand-stone:#d8d8c8;
+  --ink:#3b2416; --paper:#d8d8c8; --fg:#3b2416;
+  --accent-text:#1a9f66;
+  --font-display:"Playfair Display",Georgia,serif;
+  --font-body:"Inter",-apple-system,"Segoe UI",sans-serif;
+  --radius:18px;
+  --shadow:0 20px 50px -24px rgba(92,58,40,.25);
+  --ease:cubic-bezier(.22,.9,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+em{font-style:normal;font-weight:700} i{font-style:normal} cite{font-style:normal}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--brand-stone);color:var(--fg);line-height:1.6;overflow-x:hidden}
+img{max-width:100%}
+
+/* ===== HEADER ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;
+  padding:1rem clamp(1.2rem,5vw,4rem);transition:.4s}
+header.scrolled{background:rgba(216,216,200,.92);backdrop-filter:blur(14px);box-shadow:0 10px 40px -20px rgba(92,58,40,.25)}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:#fff;transition:color .4s}
+.logo .lg-sub{display:block;font-size:.42em;font-weight:700;letter-spacing:.34em;text-transform:uppercase;opacity:.75;margin-top:2px}
+header.scrolled .logo{color:var(--ink)}
+.logo .mark{display:flex;align-items:center;flex:none;background:transparent}
+.logo .mark svg{width:19px;height:19px}
+nav{display:flex;gap:1.6rem;align-items:center}
+nav a{color:rgba(255,255,255,.92);text-decoration:none;font-size:.92rem;font-weight:600;transition:.3s}
+header.scrolled nav a{color:var(--ink)}
+nav a:hover{color:var(--brand-yellow)}
+nav a.active{color:var(--brand-yellow)}
+nav a.cta{border:2px solid var(--brand-yellow);padding:.45rem 1.1rem;border-radius:999px}
+nav a.cta:hover{background:var(--brand-yellow);color:var(--ink)}
+#burger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;z-index:120;transition:color .4s}
+header.scrolled #burger{color:var(--ink)}
+@media(max-width:820px){
+  #burger{display:block}
+  nav{position:fixed;top:0;right:-300px;width:300px;height:100vh;background:var(--brand-stone);
+    flex-direction:column;justify-content:center;gap:.9rem;transition:right .5s var(--ease);
+    box-shadow:-20px 0 60px -30px rgba(92,58,40,.4);z-index:110}
+  nav.open{right:0}
+  nav a, header.scrolled nav a{color:var(--ink)!important;font-size:1.15rem}
+}
+
+/* ===== HERO ===== */
+.hero{position:relative;height:88vh;min-height:560px;display:flex;align-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(92,58,40,.42) 0%,rgba(92,58,40,.18) 45%,rgba(216,216,200,.65) 100%)}
+.hero-copy{position:relative;z-index:2;padding:0 clamp(1.2rem,7vw,7rem);max-width:720px}
+.hero-copy .kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;
+  font-weight:700;color:var(--brand-yellow);margin-bottom:1.1rem}
+.hero-copy .kicker::before{content:"";width:34px;height:2px;background:var(--brand-yellow)}
+.hero-copy h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2.6rem,6.5vw,4.6rem);line-height:1.06;color:#fff}
+.hero-copy h1 em{color:var(--brand-green-light)}
+.hero-copy p{margin-top:1.1rem;font-size:1.12rem;color:rgba(255,255,255,.92);max-width:560px}
+
+/* ===== SECTION HEADS ===== */
+section.block{padding:clamp(3.5rem,8vw,6.5rem) clamp(1.2rem,5vw,4rem)}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 3.2rem}
+.sec-tag{display:inline-block;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--accent-text);
+  border:1.5px solid var(--accent-text);border-radius:999px;padding:.35rem 1rem;margin-bottom:1rem}
+.sec-head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.12}
+.sec-head p{margin-top:1rem;color:rgba(92,58,40,.75);font-size:1.05rem}
+
+/* ===== VIDEO LIST (original layout: stacked rows, thumb + text) ===== */
+.res-list{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:2.2rem}
+.res-card{display:flex;gap:1.8rem;align-items:center;background:#fff;border:1px solid rgba(92,58,40,.10);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease)}
+.res-card:nth-child(even){flex-direction:row-reverse}
+.res-card:hover{transform:translateY(-6px);box-shadow:0 34px 70px -28px rgba(92,58,40,.32)}
+.res-thumb{position:relative;flex:0 0 46%;aspect-ratio:16/9;overflow:hidden;display:block}
+.res-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease);display:block}
+.res-card:hover .res-thumb img{transform:scale(1.06)}
+.res-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(92,58,40,0) 55%,rgba(92,58,40,.35));opacity:.6;transition:.4s}
+.res-play{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;
+  background:rgba(255,255,255,.94);display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(92,58,40,.5);transition:.4s var(--ease)}
+.res-play svg{width:26px;height:26px;fill:var(--brand-green);margin-left:3px}
+.res-card:hover .res-play{transform:translate(-50%,-50%) scale(1.12);background:var(--brand-green)}
+.res-card:hover .res-play svg{fill:#fff}
+.res-body{flex:1;padding:1.6rem 1.8rem 1.6rem 0}
+.res-card:nth-child(even) .res-body{padding:1.6rem 0 1.6rem 1.8rem}
+.res-num{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--accent-text)}
+.res-body h3{font-family:var(--font-display);font-weight:600;font-size:1.55rem;line-height:1.18;margin:.3rem 0 .15rem}
+.res-sub{font-size:.95rem;color:rgba(92,58,40,.62);margin-bottom:.5rem}
+.res-body p.desc{font-size:.95rem;color:rgba(92,58,40,.76);line-height:1.58;margin-bottom:1rem}
+.watch-btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:700;color:#fff;text-decoration:none;
+  background:var(--brand-green);border-radius:999px;padding:.6rem 1.3rem;transition:.3s}
+.watch-btn:hover{background:var(--brand-green-bright);transform:translateY(-2px)}
+.watch-btn svg{width:17px;height:17px;fill:#fff}
+@media(max-width:820px){
+  .res-card,.res-card:nth-child(even){flex-direction:column;align-items:stretch}
+  .res-thumb{flex:none;width:100%}
+  .res-body,.res-card:nth-child(even) .res-body{padding:0 1.4rem 1.5rem}
+}
+
+/* ===== SCROLL REVEAL ===== */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease), transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv[data-delay="1"]{transition-delay:.12s}.rv[data-delay="2"]{transition-delay:.24s}
+
+/* ===== FOOTER ===== */
+footer{padding:3rem clamp(1.2rem,5vw,4rem) 2.5rem;text-align:center;border-top:1px solid rgba(92,58,40,.14)}
+.foot-logo{font-family:var(--font-display);font-weight:600;font-size:1.4rem}
+footer p{font-size:.85rem;opacity:.75;margin-top:.8rem}
+footer a{color:var(--accent-text);font-weight:700}
+
+@media(max-width:640px){
+  nav a:not(.cta){display:none}
+  .hero-copy{top:20%}
+}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="logo">
+    <span class="mark"><img src="assets/d2g-logo.png" alt="Deserts to Grasslands" style="height:42px;width:auto;display:block"></span>
+    <span>Deserts&nbsp;to&nbsp;Grasslands&nbsp;<small class="lg-sub">Feeding the Future</small></span>
+  </div>
+  <button id="burger" aria-label="Menu">&#9776;</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#science">Science</a>
+    <a href="index.html#method">The Method</a>
+    <a href="index.html#podcast">Podcast</a>
+    <a href="resources.html" class="active">Resources</a>
+    <a href="index.html#join" class="cta">Join In</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="assets/desert.jpg" alt="Desert landscape being regenerated into grassland">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-copy">
+    <img class="hero-logo rv" src="assets/d2g-logo.png" alt="Deserts to Grasslands" style="height:96px;width:auto;display:block;margin-bottom:1rem"><span class="kicker rv">Resources</span>
+    <h1 class="rv" data-delay="1">Talks, interviews &amp; <em>evidence</em></h1>
+    <p class="rv" data-delay="2">Rodger Savory on soil, water, cattle and health — every talk and interview in one place.</p>
+  </div>
+</section>
+
+<!-- VIDEO LIST -->
+<section class="block" id="videos">
+  <div class="sec-head">
+    <span class="sec-tag rv">Watch</span>
+    <h2 class="rv" data-delay="1">Every video, <em>one place</em></h2>
+    <p class="rv" data-delay="2">The full resource library from fixdeserts.com — click through to watch on YouTube.</p>
+  </div>
+
+  <div class="res-list">
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=4RINlY0FmYg" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/4RINlY0FmYg/hqdefault.jpg" alt="Healing the Planet by Transforming Sand Back to Soil" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">EP 174 · Goodness Exchange</span>
+        <h3>Healing the Planet by Transforming Sand Back to Soil</h3>
+        <div class="res-sub">(A Complex Living Organism)</div>
+        <p class="desc">Rodger Savory joins the Goodness Exchange to explain how sand becomes living soil again.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=4RINlY0FmYg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=bojWKgm51Wc" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/bojWKgm51Wc/hqdefault.jpg" alt="Introducing the Bonsmara breed at Las Cumbres Ranch" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Las Cumbres Ranch</span>
+        <h3>Las Cumbres Ranch</h3>
+        <p class="desc">Introducing the Bonsmara cattle we'll be using in the desert. That's Pretty Neat!</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=bojWKgm51Wc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=BaEP9ZzvRjU" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/BaEP9ZzvRjU/hqdefault.jpg" alt="The Effects of the Micro Water Cycle" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Las Cumbres Ranch</span>
+        <h3>Cattle Fixing the Micro Water Cycle</h3>
+        <p class="desc">Despite a drought — 8 inches of rain in the last year and no rain for 9 weeks — the land stays moist.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=BaEP9ZzvRjU" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=eOjNyF71Ezg" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/eOjNyF71Ezg/hqdefault.jpg" alt="What is Herd Effect?" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Las Cumbres Ranch</span>
+        <h3>What is Herd Effect</h3>
+        <p class="desc">Rodger and Stefan on positive vs negative stress, steel implements vs herd effect — and why #hoofshape matters.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=eOjNyF71Ezg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/rb4ZYdmE4bY/hqdefault.jpg" alt="Deserts to Grassland Short Overview" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Desert To Grassland: Feeding the Future</span>
+        <h3>Desert To Grassland Powerpoint</h3>
+        <p class="desc">How do we turn desert to grassland? Here is how we've done it in Australia, Africa and around the world.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=nf9O_Cs2MQ0" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/nf9O_Cs2MQ0/hqdefault.jpg" alt="Turning Deserts Into Grasslands with Rodger Savory" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Hart Hagan</span>
+        <h3>Interview With Hart Hagan</h3>
+        <p class="desc">&ldquo;Turning Deserts Into Grasslands,&rdquo; with Rodger Savory.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=nf9O_Cs2MQ0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=0jnHW2JRd-g" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/0jnHW2JRd-g/hqdefault.jpg" alt="The Living Soil with Rodger Savory" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Hart Hagan</span>
+        <h3>The living soil</h3>
+        <p class="desc">THE (LIVING) SOIL — nurturing healthy soils to prevent both flooding and drought.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=0jnHW2JRd-g" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=TfvGORzbtM8" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/TfvGORzbtM8/hqdefault.jpg" alt="Rodger Savory Let's Fix Deserts" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Hart Hagan</span>
+        <h3>Let's Fix Deserts!</h3>
+        <p class="desc">Rodger Savory: Let's Fix Deserts!</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=TfvGORzbtM8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=qLGOwODjjv8" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/qLGOwODjjv8/hqdefault.jpg" alt="Water with Rodger Savory — How Do Water Cycles Really Work" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Hart Hagan</span>
+        <h3>How Do Water Cycles Really Work ?</h3>
+        <p class="desc">&ldquo;WATER&rdquo; with Rodger Savory — can we avoid floods and droughts?</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=qLGOwODjjv8" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://www.youtube.com/watch?v=H24pn4uYfZM" target="_blank" rel="noopener">
+        <img src="https://i.ytimg.com/vi/H24pn4uYfZM/hqdefault.jpg" alt="Rodger Savory Founder Savory Holistics Planet Action Studio Talk" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Ideas In Action</span>
+        <h3>Rodger Savory | Founder</h3>
+        <p class="desc">Savory Holistics LLC — Planet Action Studio Talk.</p>
+        <a class="watch-btn" href="https://www.youtube.com/watch?v=H24pn4uYfZM" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Watch on YouTube</a>
+      </div>
+    </article>
+
+    <article class="res-card rv">
+      <a class="res-thumb" href="https://trentloos.substack.com/p/rural-route-radio-nov-18-2022-grazing" target="_blank" rel="noopener">
+        <img src="assets/cow.jpg" alt="Feeding the future — grazing animals are key to a healthy future" loading="lazy">
+        <span class="res-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+      <div class="res-body">
+        <span class="res-num">Trent Loos · Rural Route Radio</span>
+        <h3>Feeding the future</h3>
+        <p class="desc">What if there was a way to turn the desert into a grassland? Grazing animals are key to a healthy future.</p>
+        <a class="watch-btn" href="https://trentloos.substack.com/p/rural-route-radio-nov-18-2022-grazing" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>Listen to the episode</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo"><img src="assets/d2g-logo.png" alt="" style="height:36px;width:auto;vertical-align:middle;margin-right:.6rem">Deserts to Grasslands</div>
+  <p>Copyright © 2026 Deserts to Grasslands. All rights reserved.</p>
+  <p>Feeding the Future · <a href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a></p>
+</footer>
+
+<script>
+/* ===== header shrink ===== */
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>40),{passive:true});
+const burger=document.getElementById('burger'), navEl=document.querySelector('nav');
+burger.addEventListener('click',()=>navEl.classList.toggle('open'));
+navEl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navEl.classList.remove('open')));
+
+/* ===== scroll reveal ===== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+</script>
+</body>
+</html>

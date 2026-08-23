@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deserts to Grasslands — Healthy Meat, Healthy People, Living Land</title>
+<meta name="description" content="Healthy meat and good health — with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ DESIGN TOKENS ============ */
+:root{
+  /* ===== Official DesertsToGrasslands brand palette — deck slides 27, 37-40 (exact colors only) ===== */
+  --brand-green:#1a9f66;
+  --brand-green-bright:#0cc373;
+  --brand-green-light:#8ff48e;
+  --brand-blue:#31a7ed;
+  --brand-cyan:#52b5d4;
+  --brand-yellow:#fdf650;
+  --brand-coral:#e07b5f;
+  --brand-stone:#d8d8c8;
+  /* text neutrals — black & white only (keeps everything readable on the light palette) */
+  --black:#3b2416;
+  --white:#ffffff;
+  /* surfaces & text — light throughout */
+  --bg:var(--brand-stone);
+  --fg:var(--black);
+  --paper:var(--brand-stone);
+  --cream:var(--white);
+  --ink:var(--black);
+  --ink-soft:var(--black);
+  --accent:var(--brand-green);
+  --accent2:var(--brand-blue);
+  --accent-text:var(--brand-green);
+  --warm:var(--brand-coral);
+  --highlight:var(--brand-yellow);
+  --section-glow:rgba(26,159,102,.10);
+  --theme-a:var(--brand-green);
+  --theme-b:var(--brand-blue);
+  --shadow:0 24px 60px -24px rgba(92,58,40,.18);
+  --radius:22px;
+  --font-display:"Fraunces", Georgia, serif;
+  --font-body:"Outfit", system-ui, -apple-system, sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+body.theme-grass{ /* page stays light; class retained for the pinned journey only */ }
+
+*{margin:0;padding:0;box-sizing:border-box}
+em{font-style:normal;font-weight:700}
+cite{font-style:normal}
+i{font-style:normal}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);
+  color:var(--fg);
+  background:var(--bg);
+  line-height:1.6;
+  overflow-x:hidden;
+  transition:background-color .9s var(--ease), color .9s var(--ease);
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--accent);color:var(--cream)}
+img,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ============ SCROLL PROGRESS ============ */
+#progress{
+  position:fixed;top:0;left:0;height:4px;width:0%;
+  background:linear-gradient(90deg,var(--brand-coral),var(--brand-yellow),var(--brand-green));
+  z-index:1001;border-radius:0 4px 4px 0;
+}
+#progress.grass{background:linear-gradient(90deg,var(--brand-green),var(--brand-green-light),var(--brand-cyan))}
+
+/* ============ NAV ============ */
+header{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:1.2rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all .5s var(--ease);
+}
+header.scrolled{
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(14px);
+  padding:.7rem 2rem;
+  box-shadow:0 10px 30px -20px rgba(92,58,40,.16);
+  border-bottom:1px solid rgba(92,58,40,.14);
+}
+header.scrolled .logo, header.scrolled a{color:var(--ink-soft)}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-weight:600;font-size:1.35rem;letter-spacing:.5px}
+.logo .lg-sub{display:block;font-size:.42em;font-weight:700;letter-spacing:.34em;text-transform:uppercase;opacity:.75;margin-top:2px}
+.logo .mark{display:flex;align-items:center;flex:none;background:transparent}
+.logo .mark svg{width:22px;height:22px}
+nav{display:flex;gap:.4rem;align-items:center}
+nav a{
+  padding:.5rem .9rem;border-radius:999px;font-size:.92rem;font-weight:500;
+  color:var(--cream);opacity:.92;transition:.3s;
+}
+nav a:hover{background:rgba(255,255,255,.16);opacity:1}
+nav a.cta{
+  background:var(--brand-coral);color:#fff;opacity:1;font-weight:600;
+  box-shadow:0 10px 24px -10px rgba(224,123,95,.7);
+}
+nav a.cta:hover{transform:translateY(-2px)}
+#burger{display:none;background:none;border:none;color:inherit;cursor:pointer;font-size:1.4rem}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  overflow:hidden;color:var(--cream);text-align:center;
+}
+.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+.hero-overlay{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(92,58,40,.38) 0%,rgba(92,58,40,.25) 45%,rgba(26,159,102,.30) 100%);
+}
+.hero-content{position:relative;z-index:2;max-width:980px;padding:6rem 2rem 4rem}
+.kicker{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.82rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;
+  padding:.5rem 1.1rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;
+  background:rgba(255,255,255,.08);backdrop-filter:blur(8px);
+  margin-bottom:1.8rem;color:var(--brand-yellow);
+}
+.kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--brand-yellow);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.6}}
+.hero h1{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(2.6rem,7.5vw,5.6rem);
+  line-height:1.18;letter-spacing:-.01em;
+}
+.hero h1 .line{display:block;overflow:hidden;padding-top:.12em;margin-top:-.12em}
+.hero h1 .line span{display:block;transform:translateY(110%);animation:lineUp 1.2s var(--ease) forwards}
+.hero h1 .line:nth-child(2) span{animation-delay:.15s}
+.hero h1 .line:nth-child(3) span{animation-delay:.3s}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--brand-green-light),var(--brand-cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes lineUp{to{transform:translateY(0)}}
+.hero-sub{
+  margin:1.8rem auto 0;max-width:640px;font-size:clamp(1rem,2vw,1.25rem);
+  color:rgba(255,255,255,.9);opacity:0;animation:fadeUp 1s var(--ease) .55s forwards;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.4rem;opacity:0;animation:fadeUp 1s var(--ease) .75s forwards}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:1rem 1.8rem;border-radius:999px;font-weight:600;font-size:1rem;
+  transition:.4s var(--ease);cursor:pointer;border:1px solid transparent;
+}
+.btn-primary{background:var(--brand-coral);color:#fff;box-shadow:0 18px 40px -14px rgba(224,123,95,.8)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 24px 50px -16px rgba(224,123,95,.9)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;background:rgba(255,255,255,.05);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.16);transform:translateY(-3px)}
+.scroll-cue{
+  position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(255,255,255,.85);
+  font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;
+}
+.scroll-cue .mouse{width:24px;height:38px;border:2px solid rgba(255,255,255,.6);border-radius:14px;position:relative}
+.scroll-cue .mouse::after{content:"";position:absolute;top:7px;left:50%;width:3px;height:7px;background:var(--brand-yellow);border-radius:3px;transform:translateX(-50%);animation:wheel 1.6s infinite}
+@keyframes wheel{0%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,12px)}}
+
+/* floating seeds/pollen */
+.seed{position:absolute;z-index:2;border-radius:50%;pointer-events:none;opacity:.5}
+@keyframes floatSeed{
+  0%{transform:translate(0,0);opacity:0}
+  10%{opacity:.7}
+  90%{opacity:.5}
+  100%{transform:translate(calc(var(--dx,30px)*1),calc(var(--dy,120px)*1));opacity:0}
+}
+
+/* ============ SECTION BASE ============ */
+section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relative}
+.wrap{max-width:1180px;margin:0 auto}
+.sec-head{max-width:820px;margin:0 auto clamp(2.5rem,5vw,4rem);text-align:center}
+.sec-tag{
+  display:inline-block;font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;
+  font-weight:700;color:var(--accent-text);margin-bottom:1rem;
+}
+.sec-head h2{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(2rem,5vw,3.6rem);line-height:1.07;letter-spacing:-.01em;
+}
+.sec-head h2 em{font-style:normal;color:var(--accent-text)}
+.sec-head p{margin-top:1.2rem;font-size:clamp(1rem,1.6vw,1.2rem);color:rgba(92,58,40,.85)}
+
+/* reveal system */
+.rv{opacity:0;transform:translateY(38px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv[data-delay="1"]{transition-delay:.1s}.rv[data-delay="2"]{transition-delay:.2s}
+.rv[data-delay="3"]{transition-delay:.3s}.rv[data-delay="4"]{transition-delay:.4s}
+
+/* ============ MARQUEE ============ */
+.marquee{
+  background:linear-gradient(90deg,var(--brand-green),var(--brand-green-bright),var(--brand-green));
+  padding:1rem 0;overflow:hidden;border-top:.5px solid rgba(255,255,255,.18);
+  border-bottom:.5px solid rgba(255,255,255,.18);position:relative;z-index:5;
+}
+.marquee-track{display:flex;gap:3.5rem;white-space:nowrap;width:max-content;animation:scrollX 26s linear infinite;align-items:center}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee span{color:rgba(255,255,255,.92);font-weight:600;font-size:1rem;letter-spacing:.04em;font-family:var(--font-display);font-style:normal}
+.marquee span i{font-style:normal;margin-right:3.5rem;color:var(--brand-yellow);opacity:.8}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+
+/* ============ STATS ============ */
+.stats{background:var(--section-glow)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.stat-card{
+  background:var(--white);background-image:linear-gradient(160deg,rgba(255,255,255,.9),rgba(255,255,255,.6));
+  border-radius:var(--radius);padding:2rem 1.5rem;text-align:center;
+  box-shadow:var(--shadow);border:1px solid rgba(92,58,40,.10);
+  position:relative;overflow:hidden;
+}
+.stat-card::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 200px at 50% -10%,var(--section-glow),transparent);opacity:0;transition:.5s}
+.stat-card:hover::before{opacity:1}
+.stat-num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,4.5vw,3.6rem);color:var(--accent-text);line-height:1}
+.stat-num .suffix{font-size:.55em}
+.stat-label{margin-top:.7rem;font-size:.92rem;color:rgba(92,58,40,.78);font-weight:500;line-height:1.4}
+
+/* ============ STORY / PROBLEM ============ */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.art{position:relative;min-height:420px}
+.big-num{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(6rem,16vw,13rem);line-height:.8;
+  background:linear-gradient(160deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  position:absolute;top:-20px;left:-10px;z-index:0;opacity:.9;
+}
+.big-num .big-cap{display:block;font-size:.32em;font-weight:600;letter-spacing:.02em;margin-top:.6rem;opacity:.85}
+.big-num small{font-size:.6em;font-weight:700;letter-spacing:.02em;display:inline;vertical-align:baseline;background:none;-webkit-text-fill-color:transparent;background:linear-gradient(160deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text}
+.art svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.body h3{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:1.2rem;font-weight:600;line-height:1.15}
+.body h3 em{font-style:normal;color:var(--accent-text)}
+.body p{color:var(--ink-soft);margin-bottom:1rem;font-size:1.05rem}
+.list{list-style:none;margin-top:1.4rem}
+.list li{display:flex;gap:.9rem;align-items:flex-start;padding:.7rem 0;border-bottom:.5px solid rgba(92,58,40,.16)}
+.list .li-ic{
+  flex:none;width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 10px 22px -10px rgba(224,123,95,.55);
+}
+.list .li-ic svg{width:22px;height:22px}
+.list strong{display:block;font-weight:600}
+.list small{color:var(--ink-soft);opacity:.85}
+
+/* ============ RATIO BARS ============ */
+.ratios{border-radius:var(--radius);padding:2.4rem;box-shadow:var(--shadow);border:1px solid rgba(92,58,40,.12);background:rgba(255,255,255,.55)}
+.bar-row{margin-bottom:1.8rem}
+.bar-row:last-child{margin-bottom:0}
+.bar-cap{display:flex;justify-content:space-between;margin-bottom:.5rem;font-weight:600}
+.bar-cap small{color:var(--ink-soft);font-weight:500}
+.bar{height:26px;background:rgba(92,58,40,.14);border-radius:999px;overflow:hidden;position:relative}
+.bar i{display:block;height:100%;width:0;border-radius:999px;transition:width 1.4s var(--ease);background:linear-gradient(90deg,var(--brand-coral),var(--brand-yellow))}
+.bar.in i{width:var(--w)}
+.bar.good i{background:linear-gradient(90deg,var(--brand-green),var(--brand-green-bright))}
+
+/* ============ CARDS GRID ============ */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.card{
+  background:var(--white);background-image:linear-gradient(165deg,rgba(255,255,255,.96),rgba(216,216,200,.6));
+  border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);border:1px solid rgba(92,58,40,.10);
+  position:relative;overflow:hidden;transition:transform .5s var(--ease);
+}
+.card:hover{transform:translateY(-8px)}
+.card .payoff{font-family:var(--font-display);font-weight:900;font-size:2.6rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;margin-bottom:.4rem}
+.card h4{font-family:var(--font-display);font-size:1.35rem;margin-bottom:.6rem;font-weight:600}
+.card p{font-size:.96rem;color:var(--ink-soft)}
+.card .ic{
+  width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:1.3rem;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  box-shadow:0 14px 28px -12px rgba(224,123,95,.6);transition:.4s;
+}
+.card:hover .ic{transform:rotate(-6deg) scale(1.06)}
+.card .ic svg{width:28px;height:28px}
+
+/* ============ PINNED SCROLL (Desert -> Grassland stages) ============ */
+.pin-wrap{position:relative;padding:0;height:400vh}
+.pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pin-bg{position:absolute;inset:0;z-index:0;
+  background:linear-gradient(180deg,#d8d8c8 0%,rgba(92,58,40,.10) 100%);
+  transition:background 1.4s var(--ease)}
+.pin[data-stage="1"] .pin-bg{background:linear-gradient(180deg,#d8d8c8 0%,rgba(92,58,40,.18) 100%)}
+.pin[data-stage="2"] .pin-bg{background:linear-gradient(180deg,#d8d8c8 0%,rgba(26,159,102,.55) 55%,#1a9f66 100%)}
+.pin[data-stage="3"] .pin-bg{background:linear-gradient(180deg,#1a9f66 0%,#0cc373 100%)}
+
+/* organic sky */
+.pin-art{position:absolute;inset:0;z-index:1;pointer-events:none}
+.pin-art .skyline{position:absolute;top:0;left:0;right:0;height:34%;opacity:.5;transition:opacity 1s}
+.pin-art .skyline i{position:absolute;border-radius:50%;background:rgba(255,255,255,.35);transition:all 1s}
+.pin-art .skyline i:nth-child(1){width:52%;height:100%;right:-18%;top:22%}
+.pin-art .skyline i:nth-child(2){width:38%;height:70%;left:-10%;top:8%}
+.pin-art .skyline i:nth-child(3){width:26%;height:48%;left:22%;top:-16%}
+.pin[data-stage="2"] .pin-art .skyline{opacity:.18}
+.pin[data-stage="3"] .pin-art .skyline{opacity:.08}
+
+/* the sun — simple, warm, not glowing-AI */
+.pin-art .sun-art{position:absolute;top:12%;right:14%;width:74px;height:74px;border-radius:50%;
+  background:var(--brand-yellow);box-shadow:0 0 0 10px rgba(253,246,80,.35),0 0 0 26px rgba(253,246,80,.16);
+  transition:.9s var(--ease)}
+.pin[data-stage="2"] .sun-art{transform:translateY(6px);opacity:.9}
+.pin[data-stage="3"] .sun-art{transform:translateY(14px) scale(.92);opacity:.75}
+
+/* layered rolling terrain — 3 organic hills */
+.pin-art .hill{position:absolute;left:-4%;right:-4%;height:52%;transition:background 1.2s var(--ease)}
+.pin-art .hill.back{bottom:26%;background:var(--hill-b,linear-gradient(180deg,rgba(92,58,40,.10),rgba(92,58,40,.20)));
+  border-radius:50% 42% 0 0 / 100% 70% 0 0;clip-path:polygon(0 34%,18% 24%,36% 30%,55% 18%,72% 26%,88% 16%,100% 22%,100% 100%,0 100%)}
+.pin-art .hill.mid{bottom:16%;height:44%;background:var(--hill-m,linear-gradient(180deg,rgba(92,58,40,.16),rgba(92,58,40,.28)));
+  border-radius:60% 38% 0 0 / 90% 64% 0 0;clip-path:polygon(0 44%,15% 30%,32% 38%,50% 22%,68% 34%,85% 20%,100% 30%,100% 100%,0 100%)}
+.pin-art .hill.front{bottom:-2%;height:40%;background:var(--hill-f,linear-gradient(180deg,rgba(92,58,40,.24),rgba(92,58,40,.36)));
+  border-radius:40% 55% 0 0 / 70% 100% 0 0;clip-path:polygon(0 60%,20% 38%,38% 50%,58% 30%,76% 44%,100% 26%,100% 100%,0 100%)}
+.pin[data-stage="2"] .hill.back{--hill-b:linear-gradient(180deg,rgba(26,159,102,.45),rgba(26,159,102,.65))}
+.pin[data-stage="2"] .hill.mid{--hill-m:linear-gradient(180deg,rgba(26,159,102,.68),rgba(26,159,102,.85))}
+.pin[data-stage="2"] .hill.front{--hill-f:linear-gradient(180deg,rgba(26,159,102,.88),rgba(26,159,102,1))}
+.pin[data-stage="3"] .hill.back{--hill-b:linear-gradient(180deg,rgba(12,195,115,.4),rgba(26,159,102,.65))}
+.pin[data-stage="3"] .hill.mid{--hill-m:linear-gradient(180deg,rgba(12,195,115,.6),rgba(26,159,102,.85))}
+.pin[data-stage="3"] .hill.front{--hill-f:linear-gradient(180deg,rgba(12,195,115,.85),rgba(26,159,102,1))}
+
+/* caption — a quiet journal card, not a glassy AI panel */
+.pin-card{position:relative;z-index:5;max-width:620px;text-align:center;padding:2.2rem 2.6rem;
+  background:rgba(255,255,255,.86);backdrop-filter:blur(6px);
+  border:1px solid rgba(92,58,40,.12);border-radius:2px;
+  box-shadow:0 24px 70px -30px rgba(92,58,40,.35)}
+.pin-card .stage-num{display:block;font-family:var(--font-body);font-size:.78rem;letter-spacing:.34em;
+  color:rgba(92,58,40,.62);text-transform:uppercase;font-weight:700}
+.pin-card h3{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.7rem);margin:.7rem 0 .9rem;
+  line-height:1.12;color:#3b2416}
+.pin-card p{color:rgba(92,58,40,.78);font-size:1.05rem;line-height:1.6}
+.pin-card::before{content:"";display:block;width:44px;height:2px;background:var(--brand-coral);margin:0 auto .4rem}
+
+/* thin progress line */
+.pin-progress{position:absolute;bottom:3.2rem;left:50%;transform:translateX(-50%);z-index:6;width:220px;height:2px;
+  background:rgba(92,58,40,.18);border-radius:2px}
+.pin-progress i{display:block;height:100%;width:var(--p,0%);background:var(--brand-green);transition:width .3s}
+/* ============ TIMELINE (regeneration steps) ============ */
+.timeline{max-width:760px;margin:0 auto}
+.tl-item{padding:0 0 1.4rem;border-bottom:1px solid rgba(92,58,40,.1)}
+.tl-item:last-child{border-bottom:none}
+.tl-body h4{font-family:var(--font-display);font-size:1.3rem;margin-bottom:.3rem}
+.tl-body p{color:rgba(92,58,40,.75);line-height:1.55}
+
+/* ============ RODGER TEDx TALK (link to YouTube) ============ */
+.talk-link{display:flex;align-items:center;justify-content:center;gap:.8rem;flex-wrap:wrap;max-width:560px;
+  margin:1.6rem auto 0;padding:1.1rem 1.7rem;border-radius:999px;text-align:center;
+  background:linear-gradient(135deg,var(--brand-green),var(--brand-blue));color:#fff;
+  font-family:var(--font-body);font-weight:700;font-size:1.05rem;box-shadow:var(--shadow);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease)}
+.talk-link:hover{transform:translateY(-3px);box-shadow:0 26px 54px -22px rgba(92,58,40,.4)}
+.talk-link svg{width:26px;height:26px;flex:none}
+/* ============ TERMINOLOGY STRIP ============ */
+.term-strip{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin:.4rem 0 1.6rem}
+.term-strip div{background:#fff;border:1px solid rgba(92,58,40,.18);border-radius:14px;padding:.7rem 1.2rem;max-width:340px}
+.term-strip strong{display:block;font-family:var(--font-display);font-size:1.05rem;color:#3b2416}
+.term-strip span{font-size:.85rem;color:rgba(59,36,22,.75)}
+
+/* ============ SCALE SECTION ============ */
+.scale-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:900px;margin:0 auto 1.6rem}
+.stat-tile{background:#fff;border:1px solid rgba(92,58,40,.16);border-radius:var(--radius);padding:1.6rem 1.2rem;text-align:center;box-shadow:var(--shadow)}
+.stat-big{font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,4vw,3.2rem);color:var(--accent-text)}
+.stat-cap{margin-top:.4rem;font-size:.88rem;color:rgba(59,36,22,.78);line-height:1.45}
+.meals-banner{max-width:860px;margin:0 auto 1.6rem;text-align:center;background:linear-gradient(135deg,var(--brand-green),var(--brand-green-bright));
+  color:#fff;border-radius:var(--radius);padding:2.2rem 2rem;box-shadow:var(--shadow)}
+
+.meals-num{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,5vw,3.8rem)}
+.meals-banner p{margin-top:.7rem;color:rgba(255,255,255,.94);line-height:1.6}
+.nsc-card{max-width:860px;margin:0 auto;background:#fff;border:1px solid rgba(92,58,40,.16);border-left:5px solid var(--brand-coral);
+  border-radius:var(--radius);padding:1.8rem 2rem;box-shadow:var(--shadow)}
+.nsc-card h3{font-family:var(--font-display);font-size:1.35rem;margin-bottom:.7rem;color:#3b2416}
+.nsc-card p{font-size:.98rem;line-height:1.65;color:rgba(59,36,22,.85)}
+.nsc-card .credit{margin-top:1rem;font-size:.82rem;color:rgba(59,36,22,.62);border-top:1px solid rgba(92,58,40,.15);padding-top:.8rem}
+@media(max-width:900px){.scale-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.scale-grid{grid-template-columns:1fr}.nsc-card{padding:1.4rem}}
+
+/* ============ PODCAST EPISODES ============ */
+.ep-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.ep{background:var(--white);background-image:linear-gradient(160deg,rgba(255,255,255,.97),rgba(216,216,200,.5));
+  border:1px solid rgba(92,58,40,.10);border-radius:var(--radius);padding:1.5rem 1.6rem;
+  box-shadow:var(--shadow);transition:transform .4s var(--ease), box-shadow .4s var(--ease)}
+.ep:hover{transform:translateY(-3px);box-shadow:0 24px 50px -22px rgba(92,58,40,.28)}
+.ep-num{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text);font-weight:700}
+.ep-body h4{font-family:var(--font-display);font-size:1.15rem;line-height:1.22;margin:.25rem 0 .45rem;font-weight:600}
+.ep-body p{font-size:.9rem;color:rgba(92,58,40,.74);line-height:1.5;margin-bottom:.7rem}
+.ep-cta{display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:700;color:var(--accent-text);text-decoration:none;
+  border:1.5px solid var(--accent-text);border-radius:999px;padding:.5rem 1.1rem;transition:.3s}
+.ep-cta:hover{background:var(--accent-text);color:#fff}
+@media(max-width:900px){.ep-grid{grid-template-columns:1fr}.ep{flex-direction:column;align-items:stretch}.ep-media{flex:1 1 100%}}
+
+.patents-note{margin-top:-.8rem;text-align:center;font-size:.9rem;color:var(--ink-soft)}
+.patents-note a{color:var(--accent-text);font-weight:700}
+/* ============ MEAT GRAPHS ============ */
+.graph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.graph-card{background:#fff;border:1px solid rgba(92,58,40,.10);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);transition:transform .45s var(--ease), box-shadow .45s var(--ease);margin:0}
+.graph-card:hover{transform:translateY(-5px);box-shadow:0 30px 60px -24px rgba(92,58,40,.28)}
+.graph-card img{width:100%;height:auto;display:block;background:#fff}
+.graph-card figcaption{padding:1rem 1.2rem 1.2rem;font-size:.86rem;line-height:1.55;color:rgba(92,58,40,.78)}
+.graph-card figcaption strong{display:block;font-size:1.02rem;color:#3b2416;margin-bottom:.25rem;font-weight:700}
+.graph-card small{opacity:.65;display:block;margin-top:.35rem}
+@media(max-width:1000px){.graph-grid{grid-template-columns:1fr}}
+
+/* ============ MAHA QUOTE ============ */
+.maha-quote{max-width:820px;margin:0 auto;text-align:center;padding:clamp(2.5rem,6vw,4rem) 1.5rem}
+.maha-quote .mark{font-family:var(--font-display);font-size:5.5rem;line-height:.6;color:var(--brand-coral);display:block;opacity:.85}
+.maha-quote blockquote{font-family:var(--font-display);font-size:clamp(1.45rem,3.4vw,2.15rem);line-height:1.32;font-weight:600;color:#3b2416}
+.maha-quote .lead{font-size:1.02rem;color:rgba(59,36,22,.78);max-width:620px;margin:1.1rem auto 0;line-height:1.6}
+.maha-quote cite{display:block;font-style:normal;font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent-text);font-weight:700;margin-top:1.6rem}
+.maha-quote cite a{color:var(--accent-text);text-decoration:underline}
+.maha-quote .src{display:block;font-size:.82rem;color:rgba(59,36,22,.62);margin-top:.35rem}
+
+/* ============ FAQ ============ */
+.faq{max-width:820px;margin:0 auto}
+.faq-item{border:1px solid rgba(92,58,40,.14);border-radius:16px;margin-bottom:.9rem;overflow:hidden;
+  background:#fff;box-shadow:0 4px 18px -12px rgba(92,58,40,.14)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:1.15rem 1.4rem;background:none;border:none;cursor:pointer;
+  font-family:var(--font-body);font-weight:600;font-size:1.02rem;color:#3b2416;text-align:left}
+.faq-q .plus{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  border:1.5px solid var(--accent-text);color:var(--accent-text);
+  font-size:1rem;line-height:1;transition:transform .3s var(--ease), background .3s, color .3s}
+.faq-item.open .plus{transform:rotate(45deg);background:var(--accent-text);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.faq-a p{padding:0 1.4rem 1.3rem;color:rgba(92,58,40,.78);line-height:1.62;font-size:.98rem}
+.faq-item.open .faq-a{max-height:440px}
+.faq-link{color:var(--accent-text);font-weight:600;text-decoration:underline}
+.contact-line{margin-top:1.3rem;font-size:.95rem;color:rgba(255,255,255,.92)}
+.contact-line a,.foot-email{color:#fff;font-weight:700;text-decoration:underline}
+
+/* ============ TEAM ============ */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.team{
+  border-radius:var(--radius);padding:2.2rem 2rem;text-align:center;box-shadow:var(--shadow);
+  background:linear-gradient(165deg,rgba(255,255,255,.96),rgba(216,216,200,.65));border:1px solid rgba(92,58,40,.10);
+}
+.team .avatar{
+  width:76px;height:76px;border-radius:50%;margin:0 auto 1.2rem;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;
+  box-shadow:0 14px 30px -12px rgba(224,123,95,.55);
+}
+.team .avatar svg{width:38px;height:38px}
+.team h4{font-family:var(--font-display);font-size:1.3rem}
+.team .role{color:var(--accent-text);font-size:.85rem;font-weight:600;letter-spacing:.05em;margin:.2rem 0 .8rem}
+.team p{font-size:.92rem;color:var(--ink-soft)}
+
+/* ============ CTA / SUBSCRIBE ============ */
+.final-cta{
+  text-align:center;border-radius:30px;padding:clamp(3rem,7vw,5rem) 2rem;
+  background:linear-gradient(135deg,var(--brand-green),var(--brand-green-bright));color:#fff;
+  box-shadow:0 40px 90px -40px rgba(224,123,95,.55);position:relative;overflow:hidden;
+}
+.final-cta::before,.final-cta::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.1)}
+.final-cta::before{width:320px;height:320px;top:-160px;left:-100px}
+.final-cta::after{width:240px;height:240px;bottom:-120px;right:-80px}
+.final-cta h2{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.4rem);font-weight:600;line-height:1.08}
+.final-cta p{max-width:560px;margin:1.2rem auto 0;color:rgba(255,255,255,.9)}
+.sub-form{display:flex;gap:.6rem;max-width:480px;margin:2.2rem auto 0;flex-wrap:wrap;justify-content:center}
+.sub-form input{
+  flex:1;min-width:220px;padding:1rem 1.3rem;border-radius:999px;border:none;outline:none;
+  font-family:var(--font-body);font-size:1rem;background:rgba(255,255,255,.92);
+}
+.sub-form button{padding:1rem 1.8rem;border-radius:999px;border:none;cursor:pointer;font-weight:700;font-family:var(--font-body);font-size:1rem;background:var(--brand-green);color:#fff;transition:.3s}
+.sub-form button:hover{transform:translateY(-2px);background:var(--brand-green)}
+
+/* ============ FOOTER ============ */
+footer{padding:3rem clamp(1.2rem,5vw,4rem) 2.5rem;text-align:center;border-top:1px solid rgba(92,58,40,.14)}
+.foot-logo{font-family:var(--font-display);font-weight:600;font-size:1.4rem;display:inline-flex;align-items:center;gap:.6rem}
+footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:900px){
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+  .grid,.ep-grid,.team-grid{grid-template-columns:repeat(2,1fr)}
+  nav{position:fixed;top:0;right:-280px;width:280px;height:100vh;background:var(--cream);flex-direction:column;justify-content:center;gap:.6rem;transition:right .5s var(--ease);box-shadow:-20px 0 60px -30px rgba(0,0,0,.4)}
+  nav.open{right:0}
+  nav a{color:var(--ink-soft)!important;font-size:1.1rem}
+  #burger{display:block}
+  .pin-art .sun-art{width:80px;height:80px}
+}
+@media(max-width:560px){
+  .grid,.ep-grid,.team-grid,.stat-grid{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(2.2rem,9vw,3rem)}
+  .pin-card{padding:2rem 1.4rem}
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .hero h1 .line span{transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header id="hdr">
+  <div class="logo">
+    <span class="mark"><img src="assets/d2g-logo.png" alt="Deserts to Grasslands" style="height:42px;width:auto;display:block"></span>
+    <span>Deserts&nbsp;to&nbsp;Grasslands&nbsp;<small class="lg-sub">Feeding the Future</small></span>
+  </div>
+  <button id="burger" aria-label="Menu">☰</button>
+  <nav id="nav">
+    <a href="#story">Why</a>
+    <a href="#science">Science</a>
+    <a href="#method">The Method</a>
+    <a href="#journey">The Turn</a>
+    <a href="#podcast">Podcast</a>
+    <a href="#faq">FAQ</a>
+    <a href="resources.html">Resources</a>
+    <a href="#join" class="cta">Join In</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="assets/desert.jpg" alt="Desert landscape being regenerated into grassland">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>
+      <span class="line"><span><em>Healthy</em> Again.</span></span>
+      <span class="line"><span>Delicious Tender Meat.</span></span>
+    </h1>
+    <p class="hero-sub">Omega Balanced meat — from Neat Meat animals. Good health for people. Delicious, tender, nutrient-dense beef raised on fermented, biodiverse forage — with the beautiful side effect of turning desert back into grassland.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#science">See the Science</a>
+      <a class="btn btn-ghost" href="#journey">Watch the Land Return</a>
+    </div>
+  </div>
+  <div class="scroll-cue"><div class="mouse"></div><span>scroll</span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" id="marquee">
+  <div class="marquee-track">
+    <span>Omega-6:3 balanced<i>✦</i></span>
+    <span>Fermented Forage<i>✦</i></span>
+    <span>No Glyphosate<i>✦</i></span>
+    <span>Grass-fed Quality<i>✦</i></span>
+    <span>Desert to Grassland<i>✦</i></span>
+    <span>Healthy People<i>✦</i></span>
+    <span>Omega-6:3 balanced<i>✦</i></span>
+    <span>Fermented Forage<i>✦</i></span>
+    <span>No Glyphosate<i>✦</i></span>
+    <span>Grass-fed Quality<i>✦</i></span>
+    <span>Desert to Grassland<i>✦</i></span>
+    <span>Healthy People<i>✦</i></span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">The Steep Cost of Unhealthy Meat</span>
+      <h2 class="rv" data-delay="1">Most of us are metabolically <em>unhealthy</em> — and the food is the cause.</h2>
+      <p class="rv" data-delay="2">Seed-oil grain-fed beef turned a nation's plate into a chronic-disease engine. The numbers now speak for themselves.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card rv"><div class="stat-num"><span data-count="95">0</span><span class="suffix">%</span></div><div class="stat-label">of American adults are metabolically unhealthy</div></div>
+      <div class="stat-card rv" data-delay="1"><div class="stat-num"><span data-count="60">0</span><span class="suffix">%</span></div><div class="stat-label">have a chronic disease — a 700% rise since 1935</div></div>
+      <div class="stat-card rv" data-delay="2"><div class="stat-num"><span data-count="43">0</span><span class="suffix">%</span></div><div class="stat-label">are obese, driving heart disease, diabetes &amp; more</div></div>
+      <div class="stat-card rv" data-delay="3"><div class="stat-num"><span data-count="700">0</span><span class="suffix">K</span></div><div class="stat-label">beef producers stopped ranching since 1980 — the herd is now smaller than 72 years ago</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY / PROBLEM -->
+<section id="story">
+  <div class="wrap split">
+    <div class="art rv">
+      <div class="big-num">95<small>%</small><span class="big-cap">of US adults are metabolically unhealthy</span></div>
+    </div>
+    <div class="body rv" data-delay="1">
+      <span class="sec-tag">Why this matters</span>
+      <h3>We didn't just eat meat. We ate <em>the wrong kind</em>, at industrial scale.</h3>
+      <p>Grain-fed, seed-oil finished beef flips the essential fatty-acid balance the human body evolved to run on. High omega-6 linoleic acid oxidizes in the body, feeding inflammation behind nearly every chronic disease of the modern age.</p>
+      <ul class="list">
+        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l-3 4 3 4M19 8l3 4-3 4M7 21h10"/></svg></span><div><strong>23.8 : 1</strong><small>omega-6 to omega-3 ratio in typical grain-fed beef — a pro-inflammatory bomb</small></div></li>
+        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/></svg></span><div><strong>80 g/day &amp; rising</strong><small>seed oil added to feed over 145 years — now 32% of total US calories</small></div></li>
+        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 8a5 5 0 0 0-10 0c0 7-5 8-5 8h20S17 15 17 8"/><path d="M9 20h6"/></svg></span><div><strong>95% metabolically broken</strong><small>and the result is a silent, systemic epidemic — not a mystery</small></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE -->
+<section id="science" style="background:var(--section-glow)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">The Fix</span>
+      <div class="term-strip rv">
+        <div><strong>Neat Meat</strong><span>the animal — desert-raised, fermented-forage-fed cattle</span></div>
+        <div><strong>Omega Balanced</strong><span>the meat from a Neat Meat animal</span></div>
+      </div>
+      <h2 class="rv" data-delay="1"><em>Omega Balanced Meat</em></h2>
+      <p class="rv" data-delay="2">Raised on fermented, biodiverse forage — it restores the natural fatty-acid balance, removes toxins, and beats everything else on the shelf for nutrition.</p>
+      <p class="rv patents-note" data-delay="3">Omega Balanced Meat. For patents &amp; licensing, <a href="mailto:infofixdeserts@gmail.com">contact us</a>.</p>
+    </div>
+    <div class="split" style="align-items:center">
+      <div class="body rv">
+        <h3>The ratio is <em>everything</em>.</h3>
+        <p>Human cells evolved around a 1:1 omega-6 to omega-3 balance. Grain-fed (feedlot) beef lands near 23.8:1. Fermented-forage-fed Omega Balanced Meat hits <strong>1.26:1</strong> — right where the ancestral diet lived.</p>
+        <div class="ratios">
+          <div class="bar-row">
+            <div class="bar-cap"><span>Grain-fed beef</span><small>23.8 : 1 — pro-inflammatory</small></div>
+            <div class="bar"><i style="--w:100%"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-cap"><span>Typical grass-fed</span><small>~2-5 : 1</small></div>
+            <div class="bar"><i style="--w:20%"></i></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-cap"><span>Omega Balanced Meat</span><small>1.26 : 1 — anti-inflammatory</small></div>
+            <div class="bar"><i class="good" style="--w:5%"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="body rv" data-delay="1">
+        <h3>More of what heals. <em>Less of what harms.</em></h3>
+        <p>Lab-verified at Microbac &amp; Utah State: fermented-forage-fed beef carries dramatically higher levels of the antioxidant, cell-protecting compounds your body depends on.</p>
+        <ul class="list">
+          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.8l-1-1.2a5.5 5.5 0 0 0-7.8 7.8l1.2 1.2 7.6 7.6 7.6-7.6 1.2-1.2a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><strong>+200% to +21,400%</strong><small>higher levels of key nutrients vs grain-fed</small></div></li>
+          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l-3 4 3 4M19 8l3 4-3 4"/></svg></span><div><strong>2× antioxidant &amp; anti-inflammatory power</strong><small>vs grass-fed and grain-fed — plasmalogens &amp; lysolecithins</small></div></li>
+          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><strong>Glyphosate fully gone</strong><small>fermentation breaks down Roundup residues — 28.8&nbsp;ng/g fresh, 13.2&nbsp;ng/g at 3 months, 0 (none detected) at 6 months</small></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- MEAT GRAPHS (from Bio Minerals Technologies lab data) -->
+<section id="graphs" style="background:var(--section-glow)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">Lab tested</span>
+      <h2 class="rv" data-delay="1">The meat, <em>measured</em></h2>
+      <p class="rv" data-delay="2">Independent labs — Microbac Laboratories and Utah State University — tested fermented-forage-fed beef against grain-fed and grass-fed. The numbers are not close.</p>
+    </div>
+    <div class="graph-grid">      <figure class="graph-card rv" data-delay="3">
+        <img src="assets/slides/glyphosate.png" alt="Glyphosate reduction chart: fresh forage 28.8 ng/g, fermented 3 months 13.2 ng/g, fermented 6 months 0 ng/g" loading="lazy">
+        <figcaption><strong>Glyphosate reduction, fresh → fermented</strong>Roundup/glyphosate falls from <strong>28.8&nbsp;ng/g</strong> fresh to <strong>13.2&nbsp;ng/g</strong> after 3 months of fermentation — and <strong>0 (none detected)</strong> at 6 months. <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="4">
+        <img src="assets/slides/ergot-reduction.png" alt="Total ergot alkaloids chart: 2,864 PPB pre-treated fescue down to 37 PPB after fermentation — a 98.7% reduction in 60 days" loading="lazy">
+        <figcaption><strong>Ergot alkaloids, before → after fermentation</strong>Infected fescue hay measured <strong>2,864&nbsp;PPB</strong> before treatment. After 60 days of fermentation it measured <strong>37&nbsp;PPB</strong> — a <strong>98.7% reduction</strong>, far below the 200&nbsp;PPB safety limit. <small>(Bio Minerals Technologies, July–Sept 2025)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="5">
+        <img src="assets/slides/feed-economics.png" alt="Grass-fed versus fermented-fed comparison table: feed needed, months to finish, and revenue per animal" loading="lazy">
+        <figcaption><strong>The economics, same 600→1,200&nbsp;lb steer</strong>Grass-fed: 12,000&nbsp;lb feed, 24 months, $2,801 per animal. Fermented-fed: <strong>4,195&nbsp;lb feed</strong>, <strong>17 months</strong>, <strong>$8,000 per animal</strong> — less than half the input, nearly triple the return. <small>(Bio Minerals Technologies)</small></figcaption>
+      </figure>
+
+      <figure class="graph-card rv">
+        <img src="assets/slides/omega-ratio.png" alt="Beef omega-6 to omega-3 ratio chart: feedlot American Wagyu 23.8:1 vs Omega Balanced Meat 1.26:1" loading="lazy">
+        <figcaption><strong>Omega-6 : Omega-3 ratio</strong>Feedlot grain-fed beef lands at 23.8:1 — pro-inflammatory. Fermented-forage-fed Omega Balanced Meat lands at <strong>1.26:1</strong>, in the healthy ancestral range. <small>(Microbac Laboratories)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="1">
+        <img src="assets/slides/fats-spectrum.png" alt="Fatty acid spectrum chart comparing seed-oil fat from grains with natural fats from fermented forage" loading="lazy">
+        <figcaption><strong>Natural fats vs seed-oil fat</strong>Fats from creation are anti-oxidative and anti-inflammatory; seed-oil fat in CAFO meat is oxidative and inflammatory. <small>(USU Nutrition &amp; Microbac)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="2">
+        <img src="assets/slides/antioxidant-scores.png" alt="Antioxidation and anti-inflammation scores of plasmalogens and lysolecithins across feeding systems" loading="lazy">
+        <figcaption><strong>Antioxidant &amp; anti-inflammatory power</strong>Plasmalogens and lysolecithins in fermented-forage beef score roughly double their grain-fed equivalents. <small>(USU / Microbac / BMC Research 2015)</small></figcaption>
+      </figure>
+    </div>
+    <p class="patents-note rv">Full test data © 2026 Bio Minerals Technologies Inc.</p>
+  </div>
+</section>
+
+
+
+<!-- METHOD / HOW -->
+<section id="method">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">The Method</span>
+      <h2 class="rv" data-delay="1">How healthy <em>Omega Balanced Meat</em> heals</h2>
+      <p class="rv" data-delay="2">It starts with what the animal eats. Fermenting biodiverse forage changes everything downstream.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M4 22V8l6 5V8l8 8"/><path d="M18 22V12l2-2v12"/></svg></div>
+        <div class="payoff">200%</div>
+        <h4>Feed efficiency</h4>
+        <p>Fermented forage improves feed conversion by at least two-fold — less feed, faster growth, shorter time to market.</p>
+      </div>
+      <div class="card rv" data-delay="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 14c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 19c3-3 8-3 11 1 2 2 4 2 5 .6"/></svg></div>
+        <div class="payoff">$8,000</div>
+        <h4>Per healthy animal</h4>
+        <p>Higher margins for producers: $471/month revenue vs $117 for conventional — profitability without compromise.</p>
+      </div>
+      <div class="card rv" data-delay="2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 5l-3-3M12 5l3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg></div>
+        <div class="payoff">1.26:1</div>
+        <h4>Omega-6:3 balance</h4>
+        <p>The healthiest essential-fatty-acid ratio of any beef — tender, delicious, and genuinely good for you.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"/><path d="M18 21c0-4-3-6-6-6s-6 2-6 6"/><path d="M5 12h14" opacity=".5"/></svg></div>
+        <div class="payoff">99.6%</div>
+        <h4>Less toxin load</h4>
+        <p>Fermentation remediates Roundup/glyphosate and pathogenic chemicals — cleaner meat, safer people.</p>
+      </div>
+      <div class="card rv" data-delay="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg></div>
+        <div class="payoff">+21,400%</div>
+        <h4>Peak nutrition</h4>
+        <p>Plasmalogens, lysolecithins, acylcarnitines and omega-3s at levels no other production system reaches.</p>
+      </div>
+      <div class="card rv" data-delay="2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M12 4v16"/><path d="M15 8l-3-3-3 3M15 16l-3 3-3-3" opacity=".5"/></svg></div>
+        <div class="payoff">17 mo</div>
+        <h4>vs 24 mo</h4>
+        <p>To market in 17 months versus 24 for grass-fed — on less than half the feed (4,195 lb vs 12,000 lb) — while being the healthiest option.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PINNED DESERT->GRASSLAND JOURNEY -->
+<section id="journey" class="pin-wrap">
+  <div class="pin" data-stage="0">
+    <div class="pin-bg"></div>
+    <div class="pin-art">
+      <div class="skyline"><i></i><i></i><i></i></div>
+      <div class="sun-art"></div>
+      <div class="hill back"></div>
+      <div class="hill mid"></div>
+      <div class="hill front"></div>
+    </div>
+    <div class="pin-card">
+      <div class="stage-num">Stage 01 — the starting point</div>
+      <h3>The arid, broken land</h3>
+      <p>Bare desert. Crusted soil. No water cycle. This is where so much of America's drylands sit today — and where the cattle already live.</p>
+    </div>
+    <div class="pin-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+    <div class="pin-progress"><i style="width:0%" id="pinBar"></i></div>
+  </div>
+</section>
+
+<!-- SIDE-EFFECT / REGENERATION -->
+<section id="side">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">The Beautiful Side Effect</span>
+      <h2 class="rv" data-delay="1">Feed people well. <em>Grow soil back.</em></h2>
+      <p class="rv" data-delay="2">The very method that makes food healthy also regenerates the land it's raised on. It's not a trade-off — it's one system doing both.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item rv">
+        <div class="tl-body"><h4>Ferment biodiverse forage</h4><p>Grasses and plants are cut, compressed, and fermented — boosting nutrition and neutralizing toxins before they're ever fed.</p></div>
+      </div>
+      <div class="tl-item rv">
+        <div class="tl-body"><h4>Feed it to the herd</h4><p>Healthy cattle thrive — growing faster with less feed — and their dung &amp; urine become the life-giving "biocarpet" on the soil.</p></div>
+      </div>
+      <div class="tl-item rv">
+        <div class="tl-body"><h4>The biocarpet works</h4><p>A thick layer of dung &amp; urine blocks the sun&#39;s sterilizing UV rays, holds moisture, and reseeds life — microbes, fungi, then grass roots.</p></div>
+      </div>
+      <div class="tl-item rv">
+        <div class="tl-body"><h4>Green = water</h4><p>Regenerated land cools itself and restarts the micro water cycle — raising rainfall, refilling aquifers, cooling whole valleys.</p></div>
+      </div>
+      <div class="tl-item rv">
+        <div class="tl-body"><h4>Desert becomes grassland</h4><p>Exactly the side effect we're after: healthy food for people, and living, breathing land restored in the process.</p></div>
+      </div>
+    </div>
+
+    <div class="quote rv" style="margin-top:3rem">
+      <blockquote>Once we green at least 150,000 acres around the Salton Sea, we change the micro water cycle — producing 8–9 inches of rain a year, cooling the region, and replenishing the aquifers.</blockquote>
+      <cite>Deserts to Grasslands — the regenerative plan</cite>
+    </div>
+  </div>
+</section>
+
+<!-- RODGER SAVORY TEDx TALK -->
+<section id="talk">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">Watch</span>
+      <h2 class="rv" data-delay="1">Rodger Savory at <em>TEDxBoston</em></h2>
+      <p class="rv" data-delay="2">Can we turn deserts into grasslands to feed the future? Rodger Savory explains the method that makes healthy meat — and brings the land back to life.</p>
+    </div>
+    <div class="talk-link rv" data-delay="1">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor" stroke="none"/></svg>
+      <a href="https://www.youtube.com/watch?v=QAG18ReGORY" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Watch Rodger Savory&rsquo;s TEDx talk on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- SCALE: 10 DESERT STATES -->
+<section id="scale">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">The scale</span>
+      <h2 class="rv" data-delay="1">10 Desert States. <em>10 Projects.</em></h2>
+      <p class="rv" data-delay="2">The plan, at national scale — and the processing technology that makes it possible.</p>
+    </div>
+
+    <div class="scale-grid">
+      <div class="stat-tile rv"><div class="stat-big">10</div><div class="stat-cap">desert states: TX&nbsp;NM&nbsp;AZ&nbsp;CA&nbsp;NV&nbsp;UT&nbsp;CO&nbsp;OR&nbsp;ID&nbsp;WY</div></div>
+      <div class="stat-tile rv" data-delay="1"><div class="stat-big">5.6M</div><div class="stat-cap">Neat Meat animals processed per year</div></div>
+      <div class="stat-tile rv" data-delay="2"><div class="stat-big">632&nbsp;lbs</div><div class="stat-cap">of meat per animal — bones out, all fat in — from a 744&nbsp;lb dressed carcass (62% of the 1,200&nbsp;lb live weight)</div></div>
+    </div>
+
+    <div class="meals-banner rv" data-delay="1">
+      <div class="meals-num">14 billion</div>
+      <p>healthy Omega Balanced meals a year from 5.6 million Neat Meat animals — over <strong>38 million meals every day</strong>: nutrient-dense, anti-inflammatory protein at national scale.</p>
+    </div>
+
+    <div class="nsc-card rv" data-delay="2">
+      <h3>Boneless meat processing that makes this possible</h3>
+      <p>The plan builds on the patented <strong>No-Spinal-Cord (NSC) processing technology</strong> from <strong>NSC Beef Processing, LLC</strong>, invented by founder &amp; CEO <strong>Gary Hendrix (Butchermaster)</strong>. Their system takes a beef animal from kill floor to truck in <strong>24 hours</strong>, bones a full carcass into primals in under <strong>20 minutes</strong> with one worker, uses no splitting saws and no spinal-cord exposure — cutting labor 30&ndash;50%, cooling meat twice as fast as industry standard, and lowering energy cost and shrinkage. New boneless (game-style) meat processing like this is what lets small regional plants in ten states handle 5.6 million animals a year.</p>
+      <p class="credit">Technology &amp; figures credit: NSC Beef Processing, LLC — Gary Hendrix, Owner / Inventor (Butchermaster).</p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="podcast" style="background:var(--section-glow)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">Listen in</span>
+      <h2 class="rv" data-delay="1">Desert to Grassland <em>Podcast</em></h2>
+      <p class="rv" data-delay="2">Thirty years of experiments across Africa, Australia, Canada and the US — finally cracked how to green the desert without irrigation.</p>
+    </div>
+    <div class="ep-grid">
+      <article class="ep rv">
+        <div class="ep-body"><span class="ep-num">Episode 1</span><h4>Turning Desert to Grassland and Feeding the Future</h4><p>How a desert plot became fertile grassland in one season.</p><a class="ep-cta" href="assets/podcast/ep1.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+      </article>
+      <article class="ep rv" data-delay="1">
+        <div class="ep-body"><span class="ep-num">Episode 2</span><h4>Can Cooling Imperial Valley Cool Southern California?</h4><p>Regrowing vegetation to cool a region and shift the micro-climate.</p><a class="ep-cta" href="assets/podcast/ep2.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+      </article>
+      <article class="ep rv">
+        <div class="ep-body"><span class="ep-num">Episode 3</span><h4>Biochar, Carbon Sequestration &amp; the XPRIZE</h4><p>Carbon removal, biochar and what the XPRIZE really rewards.</p><a class="ep-cta" href="assets/podcast/ep3.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+      </article>
+      <article class="ep rv" data-delay="1">
+        <div class="ep-body"><span class="ep-num">Episode 4</span><h4>Feeding the Cattle in the Desert to Grasslands Project</h4><p>What the herd actually eats in the desert.</p><a class="ep-cta" href="assets/podcast/ep4.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+      </article>
+      <article class="ep rv">
+        <div class="ep-body"><span class="ep-num">Episode 5</span><h4>True Profit</h4><p>The economics of regreening: what really pays, at scale.</p><a class="ep-cta" href="assets/podcast/ep5.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+      </article>
+      <article class="ep rv" data-delay="1">
+        <div class="ep-body"><span class="ep-num">Episode 6</span><h4>Cows, Chickens, Microbes &amp; Fungi: How to Turn Deserts into Grasslands</h4><p>The full living toolkit working the soil back to life.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=OxpjG2IEroA" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+      </article>
+      <article class="ep rv">
+        <div class="ep-body"><span class="ep-num">Episode 7</span><h4>Feeding the Future</h4><p>The mission in two minutes — the official overview film.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+      </article>
+      <article class="ep rv" data-delay="1">
+        <div class="ep-body"><span class="ep-num">Episode 8</span><h4>Restore the Water Cycles and Reverse Desertification</h4><p>Rodger Savory on re-wetting drylands — full video.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=UNOyzsmdMnI" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">Good questions</span>
+      <h2 class="rv" data-delay="1">The desert, the cattle, <em>the meat</em></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item rv">
+        <button class="faq-q">Won't the cattle get too hot and die in the desert?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We use heat-adapted breeds already used to hot, dry desert, plus portable shade cloth and misters. Their welfare is the priority — healthy, happy cattle are the whole point, and we run mobile chicken units alongside them for shade and cooling.</p></div>
+      </div>
+      <div class="faq-item rv" data-delay="1">
+        <button class="faq-q">How would you feed cattle in a desert?<span class="plus">+</span></button>
+        <div class="faq-a"><p>We grow biodiverse, soil-building forage nearby under irrigation, cut it, and compress it into silage or feed it fresh — trucked to the herd within 2–3 hours of cutting. It's the fermented forage that makes the meat healthy and begins regenerating the soil.</p></div>
+      </div>
+      <div class="faq-item rv" data-delay="2">
+        <button class="faq-q">Isn't methane from cattle bad for the planet?<span class="plus">+</span></button>
+        <div class="faq-a"><p>In a feedlot, yes — that's a broken system. When cattle move across living land the way nature intended, methane is part of a closed cycle and no additional methane is produced. A great read on the science: <a href="https://www.goodreads.com/book/show/8308645-should-meat-be-on-the-menu" target="_blank" rel="noopener" class="faq-link"><em>Should Meat Be on the Menu?</em></a></p></div>
+      </div>
+      <div class="faq-item rv">
+        <button class="faq-q">What exactly is a "biocarpet"?<span class="plus">+</span></button>
+        <div class="faq-a"><p>A term coined by Rodger Savory — Biocarpeting&copy;: a thick layer of dung and urine from livestock that shields soil from harmful UV, holds moisture for seed germination, and prevents evaporation. It's the warm, wet, dark environment that restarts the fungi and microbes desert sand is missing — the first step back to real soil.</p></div>
+      </div>
+      <div class="faq-item rv" data-delay="1">
+        <button class="faq-q">Why is the Salton Sea 150,000-acre target significant?<span class="plus">+</span></button>
+        <div class="faq-a"><p>The Salton Sea sits between two mountain ranges and gets only 2–3 inches of rain a year. Calculations, observation and research show that greening at least 150,000 acres changes the micro water cycle — triggering 8–9 inches of rain a year, cooling the region, and replenishing aquifers.</p></div>
+      </div>
+      <div class="faq-item rv" data-delay="2">
+        <button class="faq-q">Is this beef actually healthier?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — independently lab-tested at Microbac Laboratories and Utah State University. Fermented-forage-fed beef has a 1.26:1 omega-6:3 ratio, double the antioxidant and anti-inflammatory activity, vastly higher plasmalogens and lysolecithins, and up to 21,400% higher key nutrients — with glyphosate effectively removed.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAHA QUOTE -->
+<section id="maha" style="background:var(--section-glow)">
+  <div class="wrap">
+    <div class="maha-quote rv">
+      <span class="mark">&ldquo;</span>
+      <blockquote>&ldquo;Don&rsquo;t you want healthy children?&rdquo; Kennedy asked. The audience gave its answer with huge applause.</blockquote>
+      <p class="lead">He said they&rsquo;d agreed on the importance for the country of safe food and ending the chronic disease epidemic.</p>
+      <cite>Robert F. Kennedy Jr. &amp; Donald J. Trump &mdash; Glendale, Arizona &middot; August 23, 2024</cite>
+      <span class="src">via <a href="https://the-maha-report.substack.com" target="_blank" rel="noopener">The MAHA Report</a> &middot; Margaret Menge</span>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="wrap">
+    <div class="final-cta rv">
+      <h2>Healthy meat. Healthy people.<br>Living land.</h2>
+      <p>Join the movement turning America's drylands back into grassland — one healthy, delicious steak at a time.</p>
+      <form class="sub-form">
+        <input type="email" placeholder="Your email address" required aria-label="Email">
+        <button type="submit">Get Updates</button>
+      </form>
+      <p class="contact-line">Questions or licensing — <a href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo"><img src="assets/d2g-logo.png" alt="" style="height:36px;width:auto;vertical-align:middle;margin-right:.6rem">
+    Deserts to Grasslands
+  </div>
+  <p>Healthy meat &amp; good health — with the beautiful side effect of restoring deserts.<br>Contact: <a class="foot-email" href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a><br>Copyright © 2026 Deserts to Grasslands. All rights reserved.</p>
+</footer>
+
+<script>
+/* ===== scroll progress + nav state + theme ===== */
+const body=document.body, hdr=document.getElementById('hdr'), prog=document.getElementById('progress');
+const grassSections=['science','method','side','podcast','faq','join'];
+
+
+function onScroll(){
+  const y=window.scrollY, h=document.documentElement.scrollHeight-window.innerHeight;
+  prog.style.width=Math.min(100,y/h*100)+'%';
+  hdr.classList.toggle('scrolled',y>40);
+}
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+/* ===== reveal on scroll ===== */
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.16, rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ===== bar animations on view ===== */
+const barIo=new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); barIo.unobserve(e.target);} });
+},{threshold:.4});
+document.querySelectorAll('.bar').forEach(b=>barIo.observe(b));
+
+/* ===== counters ===== */
+const countIo=new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el=e.target, end=+el.dataset.count, dur=1600, t0=performance.now();
+    function tick(t){
+      const p=Math.min(1,(t-t0)/dur), ease=1-Math.pow(1-p,3);
+      el.textContent=Math.round(end*ease).toLocaleString();
+      if(p<1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    countIo.unobserve(el);
+  });
+},{threshold:.6});
+document.querySelectorAll('[data-count]').forEach(c=>countIo.observe(c));
+
+/* ===== hero seeds ===== */
+(function(){
+  const hero=document.querySelector('.hero');
+  for(let i=0;i<14;i++){
+    const s=document.createElement('span');
+    const sz=4+Math.random()*6;
+    s.className='seed';
+    s.style.cssText='width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;top:'+(30+Math.random()*60)+'%;background:radial-gradient(circle,#fdf650,var(--brand-yellow));--dx:'+((Math.random()*160-80))+'px;--dy:'+((Math.random()*200+80))+'px;animation:floatSeed '+(6+Math.random()*6)+'s linear '+(Math.random()*5)+'s infinite';
+    hero.appendChild(s);
+  }
+})();
+
+/* ===== pinned journey stages ===== */
+(function(){
+  const wrap=document.querySelector('#journey');
+  const pin=document.querySelector('.pin');
+  const heads=['The arid, broken land','Bare Earth Begins to hold Water after “Biocarpeting©”','Forage, fungi and life return','Living grassland. Green = water.'];
+  const paras=[
+    'Bare desert. Crusted soil. No water cycle. This is where so much of America\u2019s drylands sit today — and where the cattle already live.',
+    'Dung, urine and trampling break the crust. Rain now soaks in instead of running off. The ground starts to cool and hold moisture.',
+    'Biodiverse forage is fermented and fed. Microbes, fungi and roots rebuild the soil beneath a growing mat of green.',
+    'The micro water cycle restarts: more rain, cooler air, refilled aquifers. Desert has become grassland.'
+  ];
+  let cur=-1;
+  function update(){
+    // progress = how far the section has scrolled through the viewport (0 at top, 1 when section bottom reaches viewport bottom)
+    const r=wrap.getBoundingClientRect();
+    const total=wrap.offsetHeight - window.innerHeight;
+    const p=total>0? Math.min(1,Math.max(0,(-r.top)/total)):0;
+    const n=Math.min(3,Math.floor(p*4));
+    if(n!==cur){cur=n;
+      pin.dataset.stage=cur;
+      pin.querySelector('.pin-card h3').textContent=heads[cur];
+      pin.querySelector('.pin-card p').textContent=paras[cur];
+      const bar=document.getElementById('pinBar'); if(bar) bar.style.width=(cur+1)*25+'%';
+    }
+  }
+  addEventListener('scroll',update,{passive:true});
+  addEventListener('resize',update);
+  update();
+})();
+
+/* ===== subscribe form (no backend; local confirmation) ===== */
+document.querySelector('.sub-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  this.querySelector('button').textContent='You\u2019re on the list ✦';
+});
+
+/* ===== FAQ open/close ===== */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const item=q.closest('.faq-item');
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>o.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+/* ===== mobile menu ===== */
+const nav=document.getElementById('nav'), burger=document.getElementById('burger');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script>
+</body>
+</html>
