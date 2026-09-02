@@ -399,6 +399,25 @@ section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relativ
 .graph-card small{opacity:.65;display:block;margin-top:.35rem}
 @media(max-width:1000px){.graph-grid{grid-template-columns:1fr}}
 
+/* ============ OBNB COMPARISON TABLE ============ */
+.tbl-wrap{overflow-x:auto;margin:2.4rem auto 1.2rem;max-width:1080px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(92,58,40,.12);background:#fff}
+table.cmp{width:100%;border-collapse:collapse;font-size:.92rem;min-width:760px}
+table.cmp th,table.cmp td{padding:.95rem 1.1rem;text-align:left;vertical-align:top;border-bottom:1px solid rgba(92,58,40,.10)}
+table.cmp thead th{font-family:var(--font-display);font-size:1.02rem;background:rgba(26,159,102,.08);color:#3b2416}
+table.cmp thead th small{font-weight:500;opacity:.7}
+table.cmp tbody th[scope=row]{font-weight:600;color:#3b2416;white-space:nowrap}
+table.cmp td.win{background:rgba(26,159,102,.10)}
+table.cmp thead th.win{background:rgba(26,159,102,.22)}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none}
+
+/* ============ TOXIN CARDS ============ */
+.toxin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:1080px;margin:0 auto}
+.toxin{background:#fff;border:1px solid rgba(92,58,40,.12);border-top:4px solid var(--brand-coral);border-radius:14px;padding:1.3rem 1.4rem;box-shadow:var(--shadow)}
+.toxin strong{display:block;font-family:var(--font-display);font-size:1.05rem;color:#3b2416;margin-bottom:.35rem}
+.toxin span{font-size:.9rem;color:rgba(59,36,22,.75);line-height:1.55}
+@media(max-width:900px){.toxin-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.toxin-grid{grid-template-columns:1fr}table.cmp{font-size:.88rem}}
+
 /* ============ MAHA QUOTE ============ */
 .maha-quote{max-width:820px;margin:0 auto;text-align:center;padding:clamp(2.5rem,6vw,4rem) 1.5rem}
 .maha-quote .mark{font-family:var(--font-display);font-size:5.5rem;line-height:.6;color:var(--brand-coral);display:block;opacity:.85}
@@ -504,6 +523,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
   <nav id="nav">
     <a href="#story">Why</a>
     <a href="#science">Science</a>
+    <a href="#obnb">OBNB</a>
     <a href="#method">The Method</a>
     <a href="#journey">The Turn</a>
     <a href="#podcast">Podcast</a>
@@ -524,7 +544,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       <span class="line"><span><em>Healthy</em> Again.</span></span>
       <span class="line"><span>Delicious Tender Meat.</span></span>
     </h1>
-    <p class="hero-sub">Omega Balanced meat — from Neat Meat animals. Good health for people. Delicious, tender, nutrient-dense beef raised on fermented, biodiverse forage — with the beautiful side effect of turning desert back into grassland.</p>
+    <p class="hero-sub">Omega Balanced meat — from Neat Meat animals. Good health for people. Delicious, tender, nutrient-dense beef raised on fermented, biodiverse forage — with the beautiful side effect of turning desert back into grassland. This is <strong>Omega Balance Natural Beef (OBNB)</strong>.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#science">See the Science</a>
       <a class="btn btn-ghost" href="#journey">Watch the Land Return</a>
@@ -676,10 +696,130 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <img src="assets/slides/molecules-classes.png" alt="Summary of structural and functional classes of molecules found in fermented-forage, grass-fed, and grain-fed beef" loading="lazy">
         <figcaption><strong>Every compound class, counted</strong>Acylcarnitines, plasmalogens, lysolecithins, phospholipids and more — fermented-forage-fed beef leads the totals across the board. <small>(Bio Minerals Technologies Inc. 2026)</small></figcaption>
       </figure>
+      <figure class="graph-card rv" data-delay="3">
+        <img src="assets/slides/obnb-diet-ratios.png" alt="Bar chart of omega-6 to omega-3 ratios in grains versus BMT forages: GMO corn 34, oats 28, non-GMO corn 26, wheat 16, barley 14, dry peas 8.7 — all oxidative and inflammatory — while pasture grasses, BMT grass/legume mix and alfalfa stay low, anti-oxidative and anti-inflammatory" loading="lazy">
+        <figcaption><strong>Grains vs forages — the diet decides</strong>GMO corn hits an omega-6:3 ratio of ~34:1 and every grain skews oxidative and inflammatory; BMT pasture grasses, grass/legume mixes and alfalfa stay low-ratio, anti-oxidative and alkaline. <small>(USU Nutrition &amp; Microbac Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="4">
+        <img src="assets/slides/obnb-alfalfa-fermented.png" alt="Bar chart of nutrition compounds in fresh versus fermented alfalfa — fermentation raises dozens of measured compounds (ng ISU/ml)" loading="lazy">
+        <figcaption><strong>Fermentation multiplies the nutrition</strong>Full-spectrum analysis of the same alfalfa, fresh vs fermented: fermentation creates and liberates dozens of additional nutritional compounds (ng ISU/ml). <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="5">
+        <img src="assets/slides/obnb-plasmalogen-levels.png" alt="Plasmalogen levels in grain-fed, grass-fed and fermented forage-fed beef — fermented forage-fed leads nearly every species" loading="lazy">
+        <figcaption><strong>Plasmalogen levels, species by species</strong>Across the plasmalogen family, fermented-forage-fed beef (green) leads grain-fed and grass-fed on nearly every compound measured. <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+
+      <figure class="graph-card rv">
+        <img src="assets/slides/obnb-lysolecithin-levels.png" alt="Lysolecithin levels in grain-fed, grass-fed and fermented forage-fed beef — fermented forage-fed leads across the family" loading="lazy">
+        <figcaption><strong>Lysolecithin levels, species by species</strong>The omega-3-carrying lysolecithins that deliver EPA and DHA are dramatically higher in fermented-forage-fed beef. <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="1">
+        <img src="assets/slides/obnb-monoglycerides.png" alt="Monoglyceride levels: omega-3 monoglycerides are two orders of magnitude higher in fermented-forage-fed beef" loading="lazy">
+        <figcaption><strong>Omega-3 monoglycerides: 100× higher</strong>Monoglycerides carrying omega-3 PUFA run two orders of magnitude higher in fermented-forage-fed beef than in grain-fed or even grass-fed. <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="2">
+        <img src="assets/slides/obnb-store-compare.png" alt="Omega-6 to omega-3 bar chart: Omega Balance Natural Beef 0.83 and grass-fed 1.34 in the healthy zone; Wagyu 6.63, grocery store steak 10.8, Omaha Steaks 20.5 and Snake River Farms 26.5 in the metabolic-disease zone" loading="lazy">
+        <figcaption><strong>Supermarket shelf, measured</strong>Omega Balance Natural Beef lands at <strong>0.83:1</strong> and grass-fed at 1.34:1 in the healthy zone — Wagyu 6.63, grocery store steak 10.8, Omaha Steaks 20.5 and Snake River Farms 26.5 sit in the metabolic-disease zone. <small>(USU Nutrition &amp; Microbac, 2021)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="3">
+        <img src="assets/slides/obnb-fatty-acid-tables.png" alt="Fatty acid tables: Omega Balance Natural Beef totals 128,273 omega-3 units vs 43,231 for Wagyu, with omega-6:3 ratios of 0.83, 1.34 and 6.56" loading="lazy">
+        <figcaption><strong>Every fatty acid, counted</strong>Full fatty-acid panels: Omega Balance Natural Beef totals <strong>128,273 omega-3 units</strong> (3× grass-fed) against 106,926 omega-6 — a 0.83 ratio. Wagyu measures 283,794 omega-6 vs just 43,231 omega-3 (6.56). <small>(USU Nutrition &amp; Microbac)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="4">
+        <img src="assets/slides/obnb-grainfed-stress.png" alt="Chart of compounds 2-fold to 13-fold higher in grain-fed beef — metabolic stress biomarkers: glycerophosphocholine, hexanoyl-L-carnitine, D-glutamine, oleamide and more" loading="lazy">
+        <figcaption><strong>What lights up in grain-fed: stress</strong>Compounds 2× to 13× higher in grain-fed beef are biomarkers of mitochondrial stress, impaired fat metabolism and inflammation — D-glutamine, hexanoyl-carnitine, oleamide, glycerophosphocholine. <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv" data-delay="5">
+        <img src="assets/slides/obnb-hexanoyl-carnitine.png" alt="Hexanoyl-L-carnitine bar chart: fermented forage-fed average 91.28 versus commercial grain-fed average 756.92" loading="lazy">
+        <figcaption><strong>Mitochondrial stress marker, 8× higher</strong>Hexanoyl-L-carnitine — a biomarker of impaired mitochondrial fatty-acid oxidation — averages <strong>756.9 in commercial grain-fed</strong> vs 91.3 in fermented-forage-fed beef. <small>(Health Research Institute Labs)</small></figcaption>
+      </figure>
+      <figure class="graph-card rv">
+        <img src="assets/slides/obnb-economics.png" alt="Grass-fed versus fermented-fed economics table: same 600 to 1200 pound steer, 12,000 pounds of feed versus 4,195, 16 versus 9 months to finish, 188 versus 333 dollars monthly revenue" loading="lazy">
+        <figcaption><strong>The economics, same 600→1,200&nbsp;lb steer</strong>Fermented-fed retains 14.3% of feed vs 5%, finishes in 9 months on the ration vs 16, and returns <strong>$333/month vs $188</strong> at the same $3,000 market revenue. <small>(Bio Minerals Technologies)</small></figcaption>
+      </figure>
 
 
     </div>
-    <p class="patents-note rv">Full test data © 2026 Bio Minerals Technologies Inc.</p>
+    <p class="patents-note rv">Full test data © 2026 Bio Minerals Technologies Inc. · <a href="assets/obnb-science-deck.pdf" target="_blank" rel="noopener">Download the full OBNB science deck (PDF)</a></p>
+  </div>
+</section>
+
+<!-- OBNB: WHAT MAKES IT DIFFERENT -->
+<section id="obnb">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">Omega Balance Natural Beef</span>
+      <h2 class="rv" data-delay="1">Distinctly different. <em>Nutritionally superior.</em></h2>
+      <p class="rv" data-delay="2">OBNB is produced to a standard no feedlot or ordinary grass-fed operation matches — four non-negotiables, verified by independent labs.</p>
+    </div>
+    <div class="grid">
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
+        <h4>Higher nutrition, by design</h4>
+        <p>A diet matched to the cell and metabolic intelligence of the animal — naturally prepared forages rich in carbohydrates and minerals, plus specialized fermentation that dramatically increases the nutrition available to the animal.</p>
+      </div>
+      <div class="card rv" data-delay="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 3 9 8 12z"/><path d="M9 10l2 2 4-4"/></svg></div>
+        <h4>Clean forages only</h4>
+        <p>Natural forages that are chemical free and non-GMO — no genetic engineering or modification, and glyphosate free.</p>
+      </div>
+      <div class="card rv" data-delay="2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.5 5.5l13 13"/></svg></div>
+        <h4>Drug free. Fully.</h4>
+        <p>No vaccinations — especially no mRNA-based vaccines — no steroids, no implants, and no antibiotics. Ever.</p>
+      </div>
+      <div class="card rv" data-delay="3">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9" opacity=".35"/></svg></div>
+        <h4>No seed oils. No grain oils.</h4>
+        <p>No seed oils or grain/vegetable oils in the ration — producing a balanced omega-6 to omega-3 ratio that is critical for cellular and metabolic health.</p>
+      </div>
+      <div class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-2 7a4 4 0 0 1-8 0z"/><path d="M12 14v7M8 21h8"/></svg></div>
+        <h4>Chymostatin degraded by biology</h4>
+        <p>Chymostatin — the anti-nutrient that blocks chymotrypsin, the pancreas&#39; potent protein-digesting enzyme — is broken down by fermentation. Protein digestibility of the forage is optimized in the animal.</p>
+      </div>
+      <div class="card rv" data-delay="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg></div>
+        <h4>Since 2006 — refined 4 ways</h4>
+        <p>Meat is a direct end-product of its diet. Grass-fed since creation, grain-finishing since the 1950s, and fermented-forage feeding since 2006: three diets, three very different meats.</p>
+      </div>
+    </div>
+
+    <div class="tbl-wrap rv" data-delay="1">
+      <table class="cmp">
+        <thead><tr><th>Not the same meat</th><th>Grass-fed, grass-finished<br><small>since creation</small></th><th>Grass-fed, grain-finished<br><small>since the 1950s</small></th><th class="win">Fermented-forage-fed OBNB<br><small>since 2006</small></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Omega-6 : omega-3</th><td>2:1&ndash;4:1</td><td>7:1&ndash;30:1</td><td class="win"><strong>1:1</strong></td></tr>
+          <tr><th scope="row">Character</th><td>Antioxidative, anti-inflammatory</td><td>Highly oxidative, highly inflammatory</td><td class="win"><strong>Antioxidative, anti-inflammatory</strong></td></tr>
+          <tr><th scope="row">Toxic compounds</th><td>None</td><td>4-Hydroxy-nonenal, malondialdehyde, 100+ oxidized linoleic-acid metabolites, acrolein, carboxyethylpyrrole and many more</td><td class="win"><strong>None</strong></td></tr>
+          <tr><th scope="row">Plasmalogens (HRI score)</th><td>23.178</td><td>25.013</td><td class="win"><strong>44.358</strong></td></tr>
+          <tr><th scope="row">Lysolecithins (HRI score)</th><td>25.013</td><td>23.178</td><td class="win"><strong>53.589</strong></td></tr>
+          <tr><th scope="row">Toxins in the system</th><td>Some vaccinations</td><td>Vaccinations, antibiotics, GMOs, agricultural chemicals, growth implants/hormones, seed oils</td><td class="win"><strong>None</strong></td></tr>
+          <tr><th scope="row">Effect on metabolic health</th><td>Health promoting</td><td>Promotes metabolic dysfunction and disease in animals and humans</td><td class="win"><strong>Higher antioxidants, anti-inflammatories, amino acids, nutrients and fatty acids — nutritionally superior</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="patents-note rv">156 compound classes counted: 87 significantly higher in fermented-forage-fed beef, 9 higher in grass-fed, 18 higher in grain-fed. 10 of 14 plasmalogens and 14 of 18 lysolecithins run significantly higher on fermented forage.</p>
+  </div>
+</section>
+
+<!-- GRAIN-FED TOXINS -->
+<section id="toxins" style="background:var(--section-glow)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-tag rv">Grain-Fed Beef &amp; Toxins</span>
+      <h2 class="rv" data-delay="1">What seed-oil beef <em>carries</em> — and OBNB doesn&#39;t</h2>
+      <p class="rv" data-delay="2">When omega-6 linoleic acid peroxidizes in meat, the body inherits the whole cascade. Once inside you, these compounds mutate cells, damage DNA, drive cancer and birth defects, form arterial plaque, generate clots and promote obesity.</p>
+    </div>
+    <div class="toxin-grid">
+      <div class="toxin"><strong>4-Hydroxy-nonenal (4-HNE)</strong><span>Atherogenic, mutagenic, genotoxic, cytotoxic — forms arterial plaque, induces mutations, damages genetic information</span></div>
+      <div class="toxin"><strong>Malondialdehyde (MDA)</strong><span>Mutagenic and carcinogenic — induces mutations, drives cancer formation</span></div>
+      <div class="toxin"><strong>Oxidized linoleic-acid metabolites (OxLAMs)</strong><span>100+ compounds — atherogenic, mutagenic, obesogenic</span></div>
+      <div class="toxin"><strong>Acrolein</strong><span>Genotoxic and thrombogenic — damages genetic information, generates blood clots</span></div>
+      <div class="toxin"><strong>Carboxyethylpyrrole</strong><span>Carcinogenic and cytotoxic — cancer formation, toxic to cells</span></div>
+      <div class="toxin"><strong>The metabolic stress load</strong><span>Grain-fed beef also runs elevated oleamide (45.1 vs 13.2), phosphatidylinositol turnover (27.6 vs 7.9), hexanoyl-L-carnitine (756.9 vs 91.3) and D-glutamine — an E. coli-associated metabolite — signaling mitochondria under strain</span></div>
+    </div>
+    <p class="patents-note rv">Mechanism per Dr. Chris Knobbe, MD. In the absence of oxidative stress some of these signaling lipids are benign — but the oxidative stress prevalent today makes their harmful influences predominate.</p>
   </div>
 </section>
 
@@ -704,7 +844,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 14c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 19c3-3 8-3 11 1 2 2 4 2 5 .6"/></svg></div>
         <div class="payoff">$8,000</div>
         <h4>Per healthy animal</h4>
-        <p>Higher margins for producers: $471/month revenue vs $117 for conventional — profitability without compromise.</p>
+        <p>Higher margins for producers: $333/month revenue vs $188 for grass-fed — profitability without compromise.</p>
       </div>
       <div class="card rv" data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 5l-3-3M12 5l3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg></div>
@@ -728,7 +868,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M12 4v16"/><path d="M15 8l-3-3-3 3M15 16l-3 3-3-3" opacity=".5"/></svg></div>
         <div class="payoff">17 mo</div>
         <h4>vs 24 mo</h4>
-        <p>To market in 17 months versus 24 for grass-fed — on less than half the feed (4,195 lb vs 12,000 lb) — while being the healthiest option.</p>
+        <p>To market in 17 months versus 24 for grass-fed — on less than half the feed (4,195 lb vs 12,000 lb) with 14.3% feed retention vs 5% — while being the healthiest option.</p>
       </div>
     </div>
   </div>
@@ -896,7 +1036,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       </div>
       <div class="faq-item rv" data-delay="2">
         <button class="faq-q">Is this beef actually healthier?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Yes — independently lab-tested at Microbac Laboratories and Utah State University. Fermented-forage-fed beef has a 1.26:1 omega-6:3 ratio, double the antioxidant and anti-inflammatory activity, vastly higher plasmalogens and lysolecithins, and up to 21,400% higher key nutrients — with glyphosate effectively removed.</p></div>
+        <div class="faq-a"><p>Yes — independently lab-tested at Utah State University, Microbac Laboratories and the Health Research Institute. Fermented-forage-fed OBNB measures an 0.83:1 omega-6:3 ratio on the full fatty-acid panel, scores 44.4 (plasmalogens) and 53.6 (lysolecithins) on the HRI antioxidant/anti-inflammatory scale versus 25.0 and 23.2 for grain-fed, and carries 87 of 156 measured compound classes at significantly higher levels — up to 21,400% higher — with none of the oxidative toxins found in grain-fed beef and glyphosate effectively removed.</p></div>
       </div>
     </div>
   </div>
