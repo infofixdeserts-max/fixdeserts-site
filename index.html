@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://i.ytimg.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deserts to Grasslands — Healthy Meat, Healthy People, Living Land</title>
-<meta name="description" content="Healthy meat and good health — with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.">
+<title>Deserts to Grasslands: Healthy Meat, Healthy People, Living Land</title>
+<meta name="description" content="Healthy meat and good health, with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +15,7 @@
 <style>
 /* ============ DESIGN TOKENS ============ */
 :root{
-  /* ===== Official DesertsToGrasslands brand palette — deck slides 27, 37-40 (exact colors only) ===== */
+  /* ===== Official DesertsToGrasslands brand palette: deck slides 27, 37-40 (exact colors only) ===== */
   --brand-green:#1a9f66;
   --brand-green-bright:#0cc373;
   --brand-green-light:#8ff48e;
@@ -22,10 +24,10 @@
   --brand-yellow:#fdf650;
   --brand-coral:#e07b5f;
   --brand-stone:#d8d8c8;
-  /* text neutrals — black & white only (keeps everything readable on the light palette) */
+  /* text neutrals: black & white only (keeps everything readable on the light palette) */
   --black:#3b2416;
   --white:#ffffff;
-  /* surfaces & text — light throughout */
+  /* surfaces & text: light throughout */
   --bg:var(--brand-stone);
   --fg:var(--black);
   --paper:var(--brand-stone);
@@ -295,14 +297,14 @@ section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relativ
 .pin[data-stage="2"] .pin-art .skyline{opacity:.18}
 .pin[data-stage="3"] .pin-art .skyline{opacity:.08}
 
-/* the sun — simple, warm, not glowing-AI */
+/* the sun: simple, warm, not glowing-AI */
 .pin-art .sun-art{position:absolute;top:12%;right:14%;width:74px;height:74px;border-radius:50%;
   background:var(--brand-yellow);box-shadow:0 0 0 10px rgba(253,246,80,.35),0 0 0 26px rgba(253,246,80,.16);
   transition:.9s var(--ease)}
 .pin[data-stage="2"] .sun-art{transform:translateY(6px);opacity:.9}
 .pin[data-stage="3"] .sun-art{transform:translateY(14px) scale(.92);opacity:.75}
 
-/* layered rolling terrain — 3 organic hills */
+/* layered rolling terrain: 3 organic hills */
 .pin-art .hill{position:absolute;left:-4%;right:-4%;height:52%;transition:background 1.2s var(--ease)}
 .pin-art .hill.back{bottom:26%;background:var(--hill-b,linear-gradient(180deg,rgba(92,58,40,.10),rgba(92,58,40,.20)));
   border-radius:50% 42% 0 0 / 100% 70% 0 0;clip-path:polygon(0 34%,18% 24%,36% 30%,55% 18%,72% 26%,88% 16%,100% 22%,100% 100%,0 100%)}
@@ -317,7 +319,7 @@ section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relativ
 .pin[data-stage="3"] .hill.mid{--hill-m:linear-gradient(180deg,rgba(12,195,115,.6),rgba(26,159,102,.85))}
 .pin[data-stage="3"] .hill.front{--hill-f:linear-gradient(180deg,rgba(12,195,115,.85),rgba(26,159,102,1))}
 
-/* caption — a quiet journal card, not a glassy AI panel */
+/* caption: a quiet journal card, not a glassy AI panel */
 .pin-card{position:relative;z-index:5;max-width:620px;text-align:center;padding:2.2rem 2.6rem;
   background:rgba(255,255,255,.86);backdrop-filter:blur(6px);
   border:1px solid rgba(92,58,40,.12);border-radius:2px;
@@ -512,13 +514,13 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Deserts to Grasslands">
-<meta property="og:title" content="Deserts to Grasslands — Healthy Meat, Healthy People, Living Land">
-<meta property="og:description" content="Healthy meat and good health — with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.">
+<meta property="og:title" content="Deserts to Grasslands: Healthy Meat, Healthy People, Living Land">
+<meta property="og:description" content="Healthy meat and good health, with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.">
 <meta property="og:url" content="https://fixdeserts.com/">
 <meta property="og:image" content="https://fixdeserts.com/assets/hero-poster.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Deserts to Grasslands — Healthy Meat, Healthy People, Living Land">
-<meta name="twitter:description" content="Omega Balanced Meat beef — regenerating soil and feeding people. See the science.">
+<meta name="twitter:title" content="Deserts to Grasslands: Healthy Meat, Healthy People, Living Land">
+<meta name="twitter:description" content="Omega Balanced Meat beef: regenerating soil and feeding people. See the science.">
 <meta name="twitter:image" content="https://fixdeserts.com/assets/hero-poster.jpg">
 <link rel="canonical" href="https://fixdeserts.com/">
 <meta name="robots" content="index, follow">
@@ -553,10 +555,10 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>
-      <span class="line"><span><em>Healthy</em> Again.</span></span>
-      <span class="line"><span>Delicious Tender Meat.</span></span>
+      <span class="line"><span><em>Fixing</em> Deserts.</span></span>
+      <span class="line"><span>Feeding People Well.</span></span>
     </h1>
-    <p class="hero-sub">Omega Balanced meat — from Neat Meat animals. Good health for people. Delicious, tender, nutrient-dense beef raised on fermented, biodiverse forage — with the beautiful side effect of turning desert back into grassland. This is <strong>Omega Balance Natural Beef (OBNB)</strong>.</p>
+    <p class="hero-sub">Removing deserts and fixing them back into living grassland gives us good food. Delicious, tender, nutrient-dense beef raised on fermented, biodiverse forage, with the beautiful side effect of turning desert back into grassland. This is <strong>Omega Balance Natural Beef (OBNB)</strong>.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#science">See the Science</a>
       <a class="btn btn-ghost" href="#journey">Watch the Land Return</a>
@@ -588,14 +590,14 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-tag rv">The Steep Cost of Unhealthy Meat</span>
-      <h2 class="rv" data-delay="1">Most of us are metabolically <em>unhealthy</em> — and the food is the cause.</h2>
+      <h2 class="rv" data-delay="1">Most of us are metabolically <em>unhealthy</em>, and the food is the cause.</h2>
       <p class="rv" data-delay="2">Seed-oil grain-fed beef turned a nation's plate into a chronic-disease engine. The numbers now speak for themselves.</p>
     </div>
     <div class="stat-grid">
       <div class="stat-card rv"><div class="stat-num"><span data-count="95">0</span><span class="suffix">%</span></div><div class="stat-label">of American adults are metabolically unhealthy</div></div>
-      <div class="stat-card rv" data-delay="1"><div class="stat-num"><span data-count="60">0</span><span class="suffix">%</span></div><div class="stat-label">have a chronic disease — a 700% rise since 1935</div></div>
+      <div class="stat-card rv" data-delay="1"><div class="stat-num"><span data-count="60">0</span><span class="suffix">%</span></div><div class="stat-label">have a chronic disease, a 700% rise since 1935</div></div>
       <div class="stat-card rv" data-delay="2"><div class="stat-num"><span data-count="43">0</span><span class="suffix">%</span></div><div class="stat-label">are obese, driving heart disease, diabetes &amp; more</div></div>
-      <div class="stat-card rv" data-delay="3"><div class="stat-num"><span data-count="700">0</span><span class="suffix">K</span></div><div class="stat-label">beef producers stopped ranching since 1980 — the herd is now smaller than 72 years ago</div></div>
+      <div class="stat-card rv" data-delay="3"><div class="stat-num"><span data-count="700">0</span><span class="suffix">K</span></div><div class="stat-label">beef producers stopped ranching since 1980, and the herd is now smaller than 72 years ago</div></div>
     </div>
   </div>
 </section>
@@ -611,9 +613,9 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       <h3>We didn't just eat meat. We ate <em>the wrong kind</em>, at industrial scale.</h3>
       <p>Grain-fed, seed-oil finished beef flips the essential fatty-acid balance the human body evolved to run on. High omega-6 linoleic acid oxidizes in the body, feeding inflammation behind nearly every chronic disease of the modern age.</p>
       <ul class="list">
-        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l-3 4 3 4M19 8l3 4-3 4M7 21h10"/></svg></span><div><strong>23.8 : 1</strong><small>omega-6 to omega-3 ratio in typical grain-fed beef — a pro-inflammatory bomb</small></div></li>
-        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/></svg></span><div><strong>80 g/day &amp; rising</strong><small>seed oil added to feed over 145 years — now 32% of total US calories</small></div></li>
-        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 8a5 5 0 0 0-10 0c0 7-5 8-5 8h20S17 15 17 8"/><path d="M9 20h6"/></svg></span><div><strong>95% metabolically broken</strong><small>and the result is a silent, systemic epidemic — not a mystery</small></div></li>
+        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l-3 4 3 4M19 8l3 4-3 4M7 21h10"/></svg></span><div><strong>23.8 : 1</strong><small>omega-6 to omega-3 ratio in typical grain-fed beef, a pro-inflammatory bomb</small></div></li>
+        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/></svg></span><div><strong>80 g/day &amp; rising</strong><small>seed oil added to feed over 145 years, now 32% of total US calories</small></div></li>
+        <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 8a5 5 0 0 0-10 0c0 7-5 8-5 8h20S17 15 17 8"/><path d="M9 20h6"/></svg></span><div><strong>95% metabolically broken</strong><small>and the result is a silent, systemic epidemic, not a mystery</small></div></li>
       </ul>
     </div>
   </div>
@@ -625,20 +627,20 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">The Fix</span>
       <div class="term-strip rv">
-        <div><strong>Neat Meat</strong><span>the animal — desert-raised, fermented-forage-fed cattle</span></div>
+        <div><strong>Neat Meat</strong><span>the animal: desert-raised, fermented-forage-fed cattle</span></div>
         <div><strong>Omega Balanced</strong><span>the meat from a Neat Meat animal</span></div>
       </div>
       <h2 class="rv" data-delay="1"><em>Omega Balanced Meat</em></h2>
-      <p class="rv" data-delay="2">Raised on fermented, biodiverse forage — it restores the natural fatty-acid balance, removes toxins, and beats everything else on the shelf for nutrition.</p>
+      <p class="rv" data-delay="2">Raised on fermented, biodiverse forage: it restores the natural fatty-acid balance, removes toxins, and beats everything else on the shelf for nutrition.</p>
       <p class="rv patents-note" data-delay="3">Omega Balanced Meat. For patents &amp; licensing, <a href="mailto:infofixdeserts@gmail.com">contact us</a>.</p>
     </div>
     <div class="split" style="align-items:center">
       <div class="body rv">
         <h3>The ratio is <em>everything</em>.</h3>
-        <p>Human cells evolved around a 1:1 omega-6 to omega-3 balance. Grain-fed (feedlot) beef lands near 23.8:1. Fermented-forage-fed Omega Balanced Meat hits <strong>1.26:1</strong> — right where the ancestral diet lived.</p>
+        <p>Human cells evolved around a 1:1 omega-6 to omega-3 balance. Grain-fed (feedlot) beef lands near 23.8:1. Fermented-forage-fed Omega Balanced Meat hits <strong>1.26:1</strong>, right where the ancestral diet lived.</p>
         <div class="ratios">
           <div class="bar-row">
-            <div class="bar-cap"><span>Grain-fed beef</span><small>23.8 : 1 — pro-inflammatory</small></div>
+            <div class="bar-cap"><span>Grain-fed beef</span><small>23.8 : 1, pro-inflammatory</small></div>
             <div class="bar"><i style="--w:100%"></i></div>
           </div>
           <div class="bar-row">
@@ -646,7 +648,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
             <div class="bar"><i style="--w:20%"></i></div>
           </div>
           <div class="bar-row">
-            <div class="bar-cap"><span>Omega Balanced Meat</span><small>1.26 : 1 — anti-inflammatory</small></div>
+            <div class="bar-cap"><span>Omega Balanced Meat</span><small>1.26 : 1, anti-inflammatory</small></div>
             <div class="bar"><i class="good" style="--w:5%"></i></div>
           </div>
         </div>
@@ -656,8 +658,8 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <p>Lab-verified at Microbac &amp; Utah State: fermented-forage-fed beef carries dramatically higher levels of the antioxidant, cell-protecting compounds your body depends on.</p>
         <ul class="list">
           <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.8l-1-1.2a5.5 5.5 0 0 0-7.8 7.8l1.2 1.2 7.6 7.6 7.6-7.6 1.2-1.2a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><strong>+200% to +21,400%</strong><small>higher levels of key nutrients vs grain-fed</small></div></li>
-          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l-3 4 3 4M19 8l3 4-3 4"/></svg></span><div><strong>2× antioxidant &amp; anti-inflammatory power</strong><small>vs grass-fed and grain-fed — plasmalogens &amp; lysolecithins</small></div></li>
-          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><strong>Glyphosate fully gone</strong><small>fermentation breaks down Roundup residues — 28.8&nbsp;ng/g fresh, 13.2&nbsp;ng/g at 3 months, 0 (none detected) at 6 months</small></div></li>
+          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M5 8l-3 4 3 4M19 8l3 4-3 4"/></svg></span><div><strong>2× antioxidant &amp; anti-inflammatory power</strong><small>vs grass-fed and grain-fed: plasmalogens &amp; lysolecithins</small></div></li>
+          <li><span class="li-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><strong>Glyphosate fully gone</strong><small>fermentation breaks down Roundup residues: 28.8&nbsp;ng/g fresh, 13.2&nbsp;ng/g at 3 months, 0 (none detected) at 6 months</small></div></li>
         </ul>
       </div>
     </div>
@@ -669,24 +671,24 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">Lab tested</span>
       <h2 class="rv" data-delay="1">The meat, <em>measured</em></h2>
-      <p class="rv" data-delay="2">Independent labs — Microbac Laboratories and Utah State University — tested fermented-forage-fed beef against grain-fed and grass-fed. The numbers are not close.</p>
+      <p class="rv" data-delay="2">Independent labs, Microbac Laboratories and Utah State University, tested fermented-forage-fed beef against grain-fed and grass-fed. The numbers are not close.</p>
     </div>
     <div class="graph-grid">      <figure class="graph-card rv" data-delay="3">
         <img src="assets/slides/glyphosate.png" alt="Glyphosate reduction chart: fresh forage 28.8 ng/g, fermented 3 months 13.2 ng/g, fermented 6 months 0 ng/g" loading="lazy">
-        <figcaption><strong>Glyphosate reduction, fresh → fermented</strong>Roundup/glyphosate falls from <strong>28.8&nbsp;ng/g</strong> fresh to <strong>13.2&nbsp;ng/g</strong> after 3 months of fermentation — and <strong>0 (none detected)</strong> at 6 months. <small>(Health Research Institute Labs)</small></figcaption>
+        <figcaption><strong>Glyphosate reduction, fresh → fermented</strong>Roundup/glyphosate falls from <strong>28.8&nbsp;ng/g</strong> fresh to <strong>13.2&nbsp;ng/g</strong> after 3 months of fermentation, and <strong>0 (none detected)</strong> at 6 months. <small>(Health Research Institute Labs)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="4">
-        <img src="assets/slides/ergot-reduction.png" alt="Total ergot alkaloids chart: 2,864 PPB pre-treated fescue down to 37 PPB after fermentation — a 98.7% reduction in 60 days" loading="lazy">
-        <figcaption><strong>Ergot alkaloids, before → after fermentation</strong>Infected fescue hay measured <strong>2,864&nbsp;PPB</strong> before treatment. After 60 days of fermentation it measured <strong>37&nbsp;PPB</strong> — a <strong>98.7% reduction</strong>, far below the 200&nbsp;PPB safety limit. <small>(Bio Minerals Technologies, July–Sept 2025)</small></figcaption>
+        <img src="assets/slides/ergot-reduction.png" alt="Total ergot alkaloids chart: 2,864 PPB pre-treated fescue down to 37 PPB after fermentation, a 98.7% reduction in 60 days" loading="lazy">
+        <figcaption><strong>Ergot alkaloids, before → after fermentation</strong>Infected fescue hay measured <strong>2,864&nbsp;PPB</strong> before treatment. After 60 days of fermentation it measured <strong>37&nbsp;PPB</strong>, a <strong>98.7% reduction</strong>, far below the 200&nbsp;PPB safety limit. <small>(Bio Minerals Technologies, JulySept 2025)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="5">
         <img src="assets/slides/feed-economics.png" alt="Grass-fed versus fermented-fed comparison table: feed needed, months to finish, and revenue per animal" loading="lazy">
-        <figcaption><strong>The economics, same 600→1,200&nbsp;lb steer</strong>Grass-fed: 12,000&nbsp;lb feed, 24 months, $2,801 per animal. Fermented-fed: <strong>4,195&nbsp;lb feed</strong>, <strong>17 months</strong>, <strong>$8,000 per animal</strong> — less than half the input, nearly triple the return. <small>(Bio Minerals Technologies)</small></figcaption>
+        <figcaption><strong>The economics, same 600→1,200&nbsp;lb steer</strong>Grass-fed: 12,000&nbsp;lb feed, 24 months, $2,801 per animal. Fermented-fed: <strong>4,195&nbsp;lb feed</strong>, <strong>17 months</strong>, <strong>$8,000 per animal</strong>: less than half the input, nearly triple the return. <small>(Bio Minerals Technologies)</small></figcaption>
       </figure>
 
       <figure class="graph-card rv">
         <img src="assets/slides/omega-ratio.png" alt="Beef omega-6 to omega-3 ratio chart: feedlot American Wagyu 23.8:1 vs Omega Balanced Meat 1.26:1" loading="lazy">
-        <figcaption><strong>Omega-6 : Omega-3 ratio</strong>Feedlot grain-fed beef lands at 23.8:1 — pro-inflammatory. Fermented-forage-fed Omega Balanced Meat lands at <strong>1.26:1</strong>, in the healthy ancestral range. <small>(Microbac Laboratories)</small></figcaption>
+        <figcaption><strong>Omega-6 : Omega-3 ratio</strong>Feedlot grain-fed beef lands at 23.8:1, pro-inflammatory. Fermented-forage-fed Omega Balanced Meat lands at <strong>1.26:1</strong>, in the healthy ancestral range. <small>(Microbac Laboratories)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="1">
         <img src="assets/slides/fats-spectrum.png" alt="Fatty acid spectrum chart comparing seed-oil fat from grains with natural fats from fermented forage" loading="lazy">
@@ -698,32 +700,32 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       </figure>
       <figure class="graph-card rv" data-delay="1">
         <img src="assets/slides/nutrients-large.png" alt="Nutrient levels 200% to 21,400% higher in fermented-forage-fed than grain-fed beef" loading="lazy">
-        <figcaption><strong>Nutrients up to 21,400% higher</strong>Fermented-forage-fed beef carries dramatically more key nutrients than grain-fed — often 2x to 214x the levels. <small>(Bio Minerals Technologies / Microbac)</small></figcaption>
+        <figcaption><strong>Nutrients up to 21,400% higher</strong>Fermented-forage-fed beef carries dramatically more key nutrients than grain-fed, often 2x to 214x the levels. <small>(Bio Minerals Technologies / Microbac)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="2">
-        <img src="assets/slides/nutrients-small.png" alt="Second nutrient comparison chart — fermented-forage-fed versus grass-fed and grain-fed" loading="lazy">
+        <img src="assets/slides/nutrients-small.png" alt="Second nutrient comparison chart, fermented-forage-fed versus grass-fed and grain-fed" loading="lazy">
         <figcaption><strong>Every nutrient class wins</strong>Across the full fatty-acid and compound spectrum, fermented-forage feeding outpaces both grass-fed and grain-fed. <small>(Bio Minerals Technologies Inc. 2026)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="2">
         <img src="assets/slides/molecules-classes.png" alt="Summary of structural and functional classes of molecules found in fermented-forage, grass-fed, and grain-fed beef" loading="lazy">
-        <figcaption><strong>Every compound class, counted</strong>Acylcarnitines, plasmalogens, lysolecithins, phospholipids and more — fermented-forage-fed beef leads the totals across the board. <small>(Bio Minerals Technologies Inc. 2026)</small></figcaption>
+        <figcaption><strong>Every compound class, counted</strong>Acylcarnitines, plasmalogens, lysolecithins, phospholipids and more: fermented-forage-fed beef leads the totals across the board. <small>(Bio Minerals Technologies Inc. 2026)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="3">
-        <img src="assets/slides/obnb-diet-ratios.png" alt="Bar chart of omega-6 to omega-3 ratios in grains versus BMT forages: GMO corn 34, oats 28, non-GMO corn 26, wheat 16, barley 14, dry peas 8.7 — all oxidative and inflammatory — while pasture grasses, BMT grass/legume mix and alfalfa stay low, anti-oxidative and anti-inflammatory" loading="lazy">
-        <figcaption><strong>Grains vs forages — the diet decides</strong>GMO corn hits an omega-6:3 ratio of ~34:1 and every grain skews oxidative and inflammatory; BMT pasture grasses, grass/legume mixes and alfalfa stay low-ratio, anti-oxidative and alkaline. <small>(USU Nutrition &amp; Microbac Labs)</small></figcaption>
+        <img src="assets/slides/obnb-diet-ratios.png" alt="Bar chart of omega-6 to omega-3 ratios in grains versus BMT forages: GMO corn 34, oats 28, non-GMO corn 26, wheat 16, barley 14, dry peas 8.7, all oxidative and inflammatory, while pasture grasses, BMT grass/legume mix and alfalfa stay low, anti-oxidative and anti-inflammatory" loading="lazy">
+        <figcaption><strong>Grains vs forages: the diet decides</strong>GMO corn hits an omega-6:3 ratio of ~34:1 and every grain skews oxidative and inflammatory; BMT pasture grasses, grass/legume mixes and alfalfa stay low-ratio, anti-oxidative and alkaline. <small>(USU Nutrition &amp; Microbac Labs)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="4">
-        <img src="assets/slides/obnb-alfalfa-fermented.png" alt="Bar chart of nutrition compounds in fresh versus fermented alfalfa — fermentation raises dozens of measured compounds (ng ISU/ml)" loading="lazy">
+        <img src="assets/slides/obnb-alfalfa-fermented.png" alt="Bar chart of nutrition compounds in fresh versus fermented alfalfa: fermentation raises dozens of measured compounds (ng ISU/ml)" loading="lazy">
         <figcaption><strong>Fermentation multiplies the nutrition</strong>Full-spectrum analysis of the same alfalfa, fresh vs fermented: fermentation creates and liberates dozens of additional nutritional compounds (ng ISU/ml). <small>(Health Research Institute Labs)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="5">
-        <img src="assets/slides/obnb-plasmalogen-levels.png" alt="Plasmalogen levels in grain-fed, grass-fed and fermented forage-fed beef — fermented forage-fed leads nearly every species" loading="lazy">
-        <figcaption><strong>Plasmalogen levels, species by species</strong>Across the plasmalogen family, fermented-forage-fed beef (green) leads grain-fed and grass-fed on nearly every compound measured. <small>(Health Research Institute Labs)</small></figcaption>
+        <img src="assets/slides/obnb-plasmalogen-levels.png" alt="Plasmalogen levels in grain-fed, grass-fed and fermented forage-fed beef, fermented forage-fed leading on nearly every compound" loading="lazy">
+        <figcaption><strong>Plasmalogen levels, compound by compound</strong>Across the plasmalogen family, fermented-forage-fed beef (green) leads grain-fed and grass-fed on nearly every compound measured. <small>(Health Research Institute Labs)</small></figcaption>
       </figure>
 
       <figure class="graph-card rv">
-        <img src="assets/slides/obnb-lysolecithin-levels.png" alt="Lysolecithin levels in grain-fed, grass-fed and fermented forage-fed beef — fermented forage-fed leads across the family" loading="lazy">
-        <figcaption><strong>Lysolecithin levels, species by species</strong>The omega-3-carrying lysolecithins that deliver EPA and DHA are dramatically higher in fermented-forage-fed beef. <small>(Health Research Institute Labs)</small></figcaption>
+        <img src="assets/slides/obnb-lysolecithin-levels.png" alt="Lysolecithin levels in grain-fed, grass-fed and fermented forage-fed beef, fermented forage-fed leading across the family" loading="lazy">
+        <figcaption><strong>Lysolecithin levels, compound by compound</strong>The omega-3-carrying lysolecithins that deliver EPA and DHA are dramatically higher in fermented-forage-fed beef. <small>(Health Research Institute Labs)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="1">
         <img src="assets/slides/obnb-monoglycerides.png" alt="Monoglyceride levels: omega-3 monoglycerides are two orders of magnitude higher in fermented-forage-fed beef" loading="lazy">
@@ -731,19 +733,19 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       </figure>
       <figure class="graph-card rv" data-delay="2">
         <img src="assets/slides/obnb-store-compare.png" alt="Omega-6 to omega-3 bar chart: Omega Balance Natural Beef 0.83 and grass-fed 1.34 in the healthy zone; Wagyu 6.63, grocery store steak 10.8, Omaha Steaks 20.5 and Snake River Farms 26.5 in the metabolic-disease zone" loading="lazy">
-        <figcaption><strong>Supermarket shelf, measured</strong>Omega Balance Natural Beef lands at <strong>0.83:1</strong> and grass-fed at 1.34:1 in the healthy zone — Wagyu 6.63, grocery store steak 10.8, Omaha Steaks 20.5 and Snake River Farms 26.5 sit in the metabolic-disease zone. <small>(USU Nutrition &amp; Microbac, 2021)</small></figcaption>
+        <figcaption><strong>Supermarket shelf, measured</strong>Omega Balance Natural Beef lands at <strong>0.83:1</strong> and grass-fed at 1.34:1 in the healthy zone. Wagyu 6.63, grocery store steak 10.8, Omaha Steaks 20.5 and Snake River Farms 26.5 sit in the metabolic-disease zone. <small>(USU Nutrition &amp; Microbac, 2021)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="3">
         <img src="assets/slides/obnb-fatty-acid-tables.png" alt="Fatty acid tables: Omega Balance Natural Beef totals 128,273 omega-3 units vs 43,231 for Wagyu, with omega-6:3 ratios of 0.83, 1.34 and 6.56" loading="lazy">
-        <figcaption><strong>Every fatty acid, counted</strong>Full fatty-acid panels: Omega Balance Natural Beef totals <strong>128,273 omega-3 units</strong> (3× grass-fed) against 106,926 omega-6 — a 0.83 ratio. Wagyu measures 283,794 omega-6 vs just 43,231 omega-3 (6.56). <small>(USU Nutrition &amp; Microbac)</small></figcaption>
+        <figcaption><strong>Every fatty acid, counted</strong>Full fatty-acid panels: Omega Balance Natural Beef totals <strong>128,273 omega-3 units</strong> (3× grass-fed) against 106,926 omega-6, a 0.83 ratio. Wagyu measures 283,794 omega-6 vs just 43,231 omega-3 (6.56). <small>(USU Nutrition &amp; Microbac)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="4">
-        <img src="assets/slides/obnb-grainfed-stress.png" alt="Chart of compounds 2-fold to 13-fold higher in grain-fed beef — metabolic stress biomarkers: glycerophosphocholine, hexanoyl-L-carnitine, D-glutamine, oleamide and more" loading="lazy">
-        <figcaption><strong>What lights up in grain-fed: stress</strong>Compounds 2× to 13× higher in grain-fed beef are biomarkers of mitochondrial stress, impaired fat metabolism and inflammation — D-glutamine, hexanoyl-carnitine, oleamide, glycerophosphocholine. <small>(Health Research Institute Labs)</small></figcaption>
+        <img src="assets/slides/obnb-grainfed-stress.png" alt="Chart of compounds 2-fold to 13-fold higher in grain-fed beef, metabolic stress biomarkers: glycerophosphocholine, hexanoyl-L-carnitine, D-glutamine, oleamide and more" loading="lazy">
+        <figcaption><strong>What lights up in grain-fed: stress</strong>Compounds 2× to 13× higher in grain-fed beef are biomarkers of mitochondrial stress, impaired fat metabolism and inflammation: D-glutamine, hexanoyl-carnitine, oleamide, glycerophosphocholine. <small>(Health Research Institute Labs)</small></figcaption>
       </figure>
       <figure class="graph-card rv" data-delay="5">
         <img src="assets/slides/obnb-hexanoyl-carnitine.png" alt="Hexanoyl-L-carnitine bar chart: fermented forage-fed average 91.28 versus commercial grain-fed average 756.92" loading="lazy">
-        <figcaption><strong>Mitochondrial stress marker, 8× higher</strong>Hexanoyl-L-carnitine — a biomarker of impaired mitochondrial fatty-acid oxidation — averages <strong>756.9 in commercial grain-fed</strong> vs 91.3 in fermented-forage-fed beef. <small>(Health Research Institute Labs)</small></figcaption>
+        <figcaption><strong>Mitochondrial stress marker, 8× higher</strong>Hexanoyl-L-carnitine, a biomarker of impaired mitochondrial fatty-acid oxidation, averages <strong>756.9 in commercial grain-fed</strong> vs 91.3 in fermented-forage-fed beef. <small>(Health Research Institute Labs)</small></figcaption>
       </figure>
       <figure class="graph-card rv">
         <img src="assets/slides/obnb-economics.png" alt="Grass-fed versus fermented-fed economics table: same 600 to 1200 pound steer, 12,000 pounds of feed versus 4,195, 16 versus 9 months to finish, 188 versus 333 dollars monthly revenue" loading="lazy">
@@ -762,37 +764,37 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">Omega Balance Natural Beef</span>
       <h2 class="rv" data-delay="1">Distinctly different. <em>Nutritionally superior.</em></h2>
-      <p class="rv" data-delay="2">OBNB is produced to a standard no feedlot or ordinary grass-fed operation matches — four non-negotiables, verified by independent labs.</p>
+      <p class="rv" data-delay="2">OBNB is produced to a standard no feedlot or ordinary grass-fed operation matches, four non-negotiables, verified by independent labs.</p>
     </div>
     <div class="grid">
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
         <h4>Higher nutrition, by design</h4>
-        <p>A diet matched to the cell and metabolic intelligence of the animal — naturally prepared forages rich in carbohydrates and minerals, plus specialized fermentation that dramatically increases the nutrition available to the animal.</p>
+        <p>A diet matched to the cell and metabolic intelligence of the animal: naturally prepared forages rich in carbohydrates and minerals, plus specialized fermentation that dramatically increases the nutrition available to the animal.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 3 9 8 12z"/><path d="M9 10l2 2 4-4"/></svg></div>
         <h4>Clean forages only</h4>
-        <p>Natural forages that are chemical free and non-GMO — no genetic engineering or modification, and glyphosate free.</p>
+        <p>Natural forages that are chemical free and non-GMO: no genetic engineering or modification, and glyphosate free.</p>
       </div>
       <div class="card rv" data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.5 5.5l13 13"/></svg></div>
         <h4>Drug free. Fully.</h4>
-        <p>No vaccinations — especially no mRNA-based vaccines — no steroids, no implants, and no antibiotics. Ever.</p>
+        <p>No vaccinations (especially no mRNA-based vaccines), no steroids, no implants, and no antibiotics. Ever.</p>
       </div>
       <div class="card rv" data-delay="3">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9" opacity=".35"/></svg></div>
         <h4>No seed oils. No grain oils.</h4>
-        <p>No seed oils or grain/vegetable oils in the ration — producing a balanced omega-6 to omega-3 ratio that is critical for cellular and metabolic health.</p>
+        <p>No seed oils or grain/vegetable oils in the ration, producing a balanced omega-6 to omega-3 ratio that is critical for cellular and metabolic health.</p>
       </div>
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-2 7a4 4 0 0 1-8 0z"/><path d="M12 14v7M8 21h8"/></svg></div>
         <h4>Chymostatin degraded by biology</h4>
-        <p>Chymostatin — the anti-nutrient that blocks chymotrypsin, the pancreas&#39; potent protein-digesting enzyme — is broken down by fermentation. Protein digestibility of the forage is optimized in the animal.</p>
+        <p>Chymostatin, the anti-nutrient that blocks chymotrypsin, the pancreas&#39; potent protein-digesting enzyme, is broken down by fermentation. Protein digestibility of the forage is optimized in the animal.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg></div>
-        <h4>Since 2006 — refined 4 ways</h4>
+        <h4>Since 2006, refined 4 ways</h4>
         <p>Meat is a direct end-product of its diet. Grass-fed since creation, grain-finishing since the 1950s, and fermented-forage feeding since 2006: three diets, three very different meats.</p>
       </div>
     </div>
@@ -801,13 +803,13 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       <table class="cmp">
         <thead><tr><th>Not the same meat</th><th>Grass-fed, grass-finished<br><small>since creation</small></th><th>Grass-fed, grain-finished<br><small>since the 1950s</small></th><th class="win">Fermented-forage-fed OBNB<br><small>since 2006</small></th></tr></thead>
         <tbody>
-          <tr><th scope="row">Omega-6 : omega-3</th><td>2:1&ndash;4:1</td><td>7:1&ndash;30:1</td><td class="win"><strong>1:1</strong></td></tr>
+          <tr><th scope="row">Omega-6 : omega-3</th><td>2:1 to 4:1</td><td>7:1 to 30:1</td><td class="win"><strong>1:1</strong></td></tr>
           <tr><th scope="row">Character</th><td>Antioxidative, anti-inflammatory</td><td>Highly oxidative, highly inflammatory</td><td class="win"><strong>Antioxidative, anti-inflammatory</strong></td></tr>
           <tr><th scope="row">Toxic compounds</th><td>None</td><td>4-Hydroxy-nonenal, malondialdehyde, 100+ oxidized linoleic-acid metabolites, acrolein, carboxyethylpyrrole and many more</td><td class="win"><strong>None</strong></td></tr>
           <tr><th scope="row">Plasmalogens (HRI score)</th><td>23.178</td><td>25.013</td><td class="win"><strong>44.358</strong></td></tr>
           <tr><th scope="row">Lysolecithins (HRI score)</th><td>25.013</td><td>23.178</td><td class="win"><strong>53.589</strong></td></tr>
           <tr><th scope="row">Toxins in the system</th><td>Some vaccinations</td><td>Vaccinations, antibiotics, GMOs, agricultural chemicals, growth implants/hormones, seed oils</td><td class="win"><strong>None</strong></td></tr>
-          <tr><th scope="row">Effect on metabolic health</th><td>Health promoting</td><td>Promotes metabolic dysfunction and disease in animals and humans</td><td class="win"><strong>Higher antioxidants, anti-inflammatories, amino acids, nutrients and fatty acids — nutritionally superior</strong></td></tr>
+          <tr><th scope="row">Effect on metabolic health</th><td>Health promoting</td><td>Promotes metabolic dysfunction and disease in animals and humans</td><td class="win"><strong>Higher antioxidants, anti-inflammatories, amino acids, nutrients and fatty acids, nutritionally superior</strong></td></tr>
         </tbody>
       </table>
     </div>
@@ -820,18 +822,18 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-tag rv">Grain-Fed Beef &amp; Toxins</span>
-      <h2 class="rv" data-delay="1">What seed-oil beef <em>carries</em> — and OBNB doesn&#39;t</h2>
+      <h2 class="rv" data-delay="1">What seed-oil beef <em>carries</em>, and OBNB doesn&#39;t</h2>
       <p class="rv" data-delay="2">When omega-6 linoleic acid peroxidizes in meat, the body inherits the whole cascade. Once inside you, these compounds mutate cells, damage DNA, drive cancer and birth defects, form arterial plaque, generate clots and promote obesity.</p>
     </div>
     <div class="toxin-grid">
-      <div class="toxin"><strong>4-Hydroxy-nonenal (4-HNE)</strong><span>Atherogenic, mutagenic, genotoxic, cytotoxic — forms arterial plaque, induces mutations, damages genetic information</span></div>
-      <div class="toxin"><strong>Malondialdehyde (MDA)</strong><span>Mutagenic and carcinogenic — induces mutations, drives cancer formation</span></div>
-      <div class="toxin"><strong>Oxidized linoleic-acid metabolites (OxLAMs)</strong><span>100+ compounds — atherogenic, mutagenic, obesogenic</span></div>
-      <div class="toxin"><strong>Acrolein</strong><span>Genotoxic and thrombogenic — damages genetic information, generates blood clots</span></div>
-      <div class="toxin"><strong>Carboxyethylpyrrole</strong><span>Carcinogenic and cytotoxic — cancer formation, toxic to cells</span></div>
-      <div class="toxin"><strong>The metabolic stress load</strong><span>Grain-fed beef also runs elevated oleamide (45.1 vs 13.2), phosphatidylinositol turnover (27.6 vs 7.9), hexanoyl-L-carnitine (756.9 vs 91.3) and D-glutamine — an E. coli-associated metabolite — signaling mitochondria under strain</span></div>
+      <div class="toxin"><strong>4-Hydroxy-nonenal (4-HNE)</strong><span>Atherogenic, mutagenic, genotoxic, cytotoxic: forms arterial plaque, induces mutations, damages genetic information</span></div>
+      <div class="toxin"><strong>Malondialdehyde (MDA)</strong><span>Mutagenic and carcinogenic: induces mutations, drives cancer formation</span></div>
+      <div class="toxin"><strong>Oxidized linoleic-acid metabolites (OxLAMs)</strong><span>100+ compounds: atherogenic, mutagenic, obesogenic</span></div>
+      <div class="toxin"><strong>Acrolein</strong><span>Genotoxic and thrombogenic: damages genetic information, generates blood clots</span></div>
+      <div class="toxin"><strong>Carboxyethylpyrrole</strong><span>Carcinogenic and cytotoxic: cancer formation, toxic to cells</span></div>
+      <div class="toxin"><strong>The metabolic stress load</strong><span>Grain-fed beef also runs elevated oleamide (45.1 vs 13.2), phosphatidylinositol turnover (27.6 vs 7.9), hexanoyl-L-carnitine (756.9 vs 91.3) and D-glutamine, an E. coli-associated metabolite, all signaling mitochondria under strain</span></div>
     </div>
-    <p class="patents-note rv">Mechanism per Dr. Chris Knobbe, MD. In the absence of oxidative stress some of these signaling lipids are benign — but the oxidative stress prevalent today makes their harmful influences predominate.</p>
+    <p class="patents-note rv">Mechanism per Dr. Chris Knobbe, MD. In the absence of oxidative stress some of these signaling lipids are benign, but the oxidative stress prevalent today makes their harmful influences predominate.</p>
   </div>
 </section>
 
@@ -850,25 +852,25 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M4 22V8l6 5V8l8 8"/><path d="M18 22V12l2-2v12"/></svg></div>
         <div class="payoff">200%</div>
         <h4>Feed efficiency</h4>
-        <p>Fermented forage improves feed conversion by at least two-fold — less feed, faster growth, shorter time to market.</p>
+        <p>Fermented forage improves feed conversion by at least two-fold: less feed, faster growth, shorter time to market.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 14c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 19c3-3 8-3 11 1 2 2 4 2 5 .6"/></svg></div>
         <div class="payoff">$8,000</div>
         <h4>Per healthy animal</h4>
-        <p>Higher margins for producers: $333/month revenue vs $188 for grass-fed — profitability without compromise.</p>
+        <p>Higher margins for producers: $333/month revenue vs $188 for grass-fed: profitability without compromise.</p>
       </div>
       <div class="card rv" data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 5l-3-3M12 5l3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg></div>
         <div class="payoff">1.26:1</div>
         <h4>Omega-6:3 balance</h4>
-        <p>The healthiest essential-fatty-acid ratio of any beef — tender, delicious, and genuinely good for you.</p>
+        <p>The healthiest essential-fatty-acid ratio of any beef: tender, delicious, and genuinely good for you.</p>
       </div>
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"/><path d="M18 21c0-4-3-6-6-6s-6 2-6 6"/><path d="M5 12h14" opacity=".5"/></svg></div>
         <div class="payoff">99.6%</div>
         <h4>Less toxin load</h4>
-        <p>Fermentation remediates Roundup/glyphosate and pathogenic chemicals — cleaner meat, safer people.</p>
+        <p>Fermentation remediates Roundup/glyphosate and pathogenic chemicals: cleaner meat, safer people.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg></div>
@@ -880,7 +882,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M12 4v16"/><path d="M15 8l-3-3-3 3M15 16l-3 3-3-3" opacity=".5"/></svg></div>
         <div class="payoff">17 mo</div>
         <h4>vs 24 mo</h4>
-        <p>To market in 17 months versus 24 for grass-fed — on less than half the feed (4,195 lb vs 12,000 lb) with 14.3% feed retention vs 5% — while being the healthiest option.</p>
+        <p>To market in 17 months versus 24 for grass-fed, on less than half the feed (4,195 lb vs 12,000 lb) with 14.3% feed retention vs 5%, while being the healthiest option.</p>
       </div>
     </div>
   </div>
@@ -898,9 +900,9 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       <div class="hill front"></div>
     </div>
     <div class="pin-card">
-      <div class="stage-num">Stage 01 — the starting point</div>
+      <div class="stage-num">Stage 01: the starting point</div>
       <h3>The arid, broken land</h3>
-      <p>Bare desert. Crusted soil. No water cycle. This is where so much of America's drylands sit today — and where the cattle already live.</p>
+      <p>Bare desert. Crusted soil. No water cycle. This is where so much of America's drylands sit today, and where the cattle already live.</p>
     </div>
     <div class="pin-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
     <div class="pin-progress"><i style="width:0%" id="pinBar"></i></div>
@@ -913,20 +915,20 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">The Beautiful Side Effect</span>
       <h2 class="rv" data-delay="1">Feed people well. <em>Grow soil back.</em></h2>
-      <p class="rv" data-delay="2">The very method that makes food healthy also regenerates the land it's raised on. It's not a trade-off — it's one system doing both.</p>
+      <p class="rv" data-delay="2">The very method that makes food healthy also regenerates the land it's raised on. It&#39;s not a trade-off; it&#39;s one system doing both.</p>
     </div>
     <div class="timeline">
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Ferment biodiverse forage</h4><p>Grasses and plants are cut, compressed, and fermented — boosting nutrition and neutralizing toxins before they're ever fed.</p></div>
+        <div class="tl-body"><h4>Ferment biodiverse forage</h4><p>Grasses and plants are cut, compressed, and fermented, boosting nutrition and neutralizing toxins before they're ever fed.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Feed it to the herd</h4><p>Healthy cattle thrive — growing faster with less feed — and their dung &amp; urine become the life-giving "biocarpet" on the soil.</p></div>
+        <div class="tl-body"><h4>Feed it to the herd</h4><p>Healthy cattle thrive, growing faster with less feed, and their dung &amp; urine become the life-giving "biocarpet" on the soil.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>The biocarpet works</h4><p>A thick layer of dung &amp; urine blocks the sun&#39;s sterilizing UV rays, holds moisture, and reseeds life — microbes, fungi, then grass roots.</p></div>
+        <div class="tl-body"><h4>The biocarpet works</h4><p>A thick layer of dung &amp; urine blocks the sun&#39;s sterilizing UV rays, holds moisture, and reseeds life: microbes, fungi, then grass roots.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Green = water</h4><p>Regenerated land cools itself and restarts the micro water cycle — raising rainfall, refilling aquifers, cooling whole valleys.</p></div>
+        <div class="tl-body"><h4>Green = water</h4><p>Regenerated land cools itself and restarts the micro water cycle, raising rainfall, refilling aquifers, cooling whole valleys.</p></div>
       </div>
       <div class="tl-item rv">
         <div class="tl-body"><h4>Desert becomes grassland</h4><p>Exactly the side effect we're after: healthy food for people, and living, breathing land restored in the process.</p></div>
@@ -934,8 +936,8 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     </div>
 
     <div class="quote rv" style="margin-top:3rem">
-      <blockquote>Once we green at least 150,000 acres around the Salton Sea, we change the micro water cycle — producing 8–9 inches of rain a year, cooling the region, and replenishing the aquifers.</blockquote>
-      <cite>Deserts to Grasslands — the regenerative plan</cite>
+      <blockquote>Once we green at least 150,000 acres around the Salton Sea, we change the micro water cycle, producing 8 to 9 inches of rain a year, cooling the region, and replenishing the aquifers.</blockquote>
+      <cite>Deserts to Grasslands, the regenerative plan</cite>
     </div>
   </div>
 </section>
@@ -946,7 +948,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">Watch</span>
       <h2 class="rv" data-delay="1">Rodger Savory at <em>TEDxBoston</em></h2>
-      <p class="rv" data-delay="2">Can we turn deserts into grasslands to feed the future? Rodger Savory explains the method that makes healthy meat — and brings the land back to life.</p>
+      <p class="rv" data-delay="2">Can we turn deserts into grasslands to feed the future? Rodger Savory explains the method that makes healthy meat and brings the land back to life.</p>
     </div>
     <div class="talk-link rv" data-delay="1">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z" fill="currentColor" stroke="none"/></svg>
@@ -961,24 +963,24 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">The scale</span>
       <h2 class="rv" data-delay="1">10 Desert States. <em>10 Projects.</em></h2>
-      <p class="rv" data-delay="2">The plan, at national scale — and the processing technology that makes it possible.</p>
+      <p class="rv" data-delay="2">The plan, at national scale, and the processing technology that makes it possible.</p>
     </div>
 
     <div class="scale-grid">
       <div class="stat-tile rv"><div class="stat-big">10</div><div class="stat-cap">desert states: TX&nbsp;NM&nbsp;AZ&nbsp;CA&nbsp;NV&nbsp;UT&nbsp;CO&nbsp;OR&nbsp;ID&nbsp;WY</div></div>
       <div class="stat-tile rv" data-delay="1"><div class="stat-big">5.6M</div><div class="stat-cap">Neat Meat animals processed per year</div></div>
-      <div class="stat-tile rv" data-delay="2"><div class="stat-big">632&nbsp;lbs</div><div class="stat-cap">of meat per animal — bones out, all fat in — from a 744&nbsp;lb dressed carcass (62% of the 1,200&nbsp;lb live weight)</div></div>
+      <div class="stat-tile rv" data-delay="2"><div class="stat-big">632&nbsp;lbs</div><div class="stat-cap">of meat per animal, bones out and all fat in, from a 744&nbsp;lb dressed carcass (62% of the 1,200&nbsp;lb live weight)</div></div>
     </div>
 
     <div class="meals-banner rv" data-delay="1">
       <div class="meals-num">14 billion</div>
-      <p>healthy Omega Balanced meals a year from 5.6 million Neat Meat animals — over <strong>38 million meals every day</strong>: nutrient-dense, anti-inflammatory protein at national scale.</p>
+      <p>healthy Omega Balanced meals a year from 5.6 million Neat Meat animals, over <strong>38 million meals every day</strong>: nutrient-dense, anti-inflammatory protein at national scale.</p>
     </div>
 
     <div class="nsc-card rv" data-delay="2">
       <h3>Boneless meat processing that makes this possible</h3>
-      <p>The plan builds on the patented <strong>No-Spinal-Cord (NSC) processing technology</strong> from <strong>NSC Beef Processing, LLC</strong>, invented by founder &amp; CEO <strong>Gary Hendrix (Butchermaster)</strong>. Their system takes a beef animal from kill floor to truck in <strong>24 hours</strong>, bones a full carcass into primals in under <strong>20 minutes</strong> with one worker, uses no splitting saws and no spinal-cord exposure — cutting labor 30&ndash;50%, cooling meat twice as fast as industry standard, and lowering energy cost and shrinkage. New boneless (game-style) meat processing like this is what lets small regional plants in ten states handle 5.6 million animals a year.</p>
-      <p class="credit">Technology &amp; figures credit: NSC Beef Processing, LLC — Gary Hendrix, Owner / Inventor (Butchermaster).</p>
+      <p>The plan builds on the patented <strong>No-Spinal-Cord (NSC) processing technology</strong> from <strong>NSC Beef Processing, LLC</strong>, invented by founder &amp; CEO <strong>Gary Hendrix (Butchermaster)</strong>. Their system takes a beef animal from kill floor to truck in <strong>24 hours</strong>, bones a full carcass into primals in under <strong>20 minutes</strong> with one worker, uses no splitting saws and no spinal-cord exposure, cutting labor 30 to 50%, cooling meat twice as fast as industry standard, and lowering energy cost and shrinkage. New boneless (game-style) meat processing like this is what lets small regional plants in ten states handle 5.6 million animals a year.</p>
+      <p class="credit">Technology &amp; figures credit: NSC Beef Processing, LLC, Gary Hendrix, Owner / Inventor (Butchermaster).</p>
     </div>
 </section>
 
@@ -988,7 +990,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="sec-head">
       <span class="sec-tag rv">Listen in</span>
       <h2 class="rv" data-delay="1">Desert to Grassland <em>Podcast</em></h2>
-      <p class="rv" data-delay="2">Thirty years of experiments across Africa, Australia, Canada and the US — finally cracked how to green the desert without irrigation.</p>
+      <p class="rv" data-delay="2">Thirty years of experiments across Africa, Australia, Canada and the US, finally cracked how to green the desert without irrigation.</p>
     </div>
     <div class="ep-grid">
       <article class="ep rv">
@@ -1010,10 +1012,10 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
         <div class="ep-body"><span class="ep-num">Episode 6</span><h4>Cows, Chickens, Microbes &amp; Fungi: How to Turn Deserts into Grasslands</h4><p>The full living toolkit working the soil back to life.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=OxpjG2IEroA" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </article>
       <article class="ep rv">
-        <div class="ep-body"><span class="ep-num">Episode 7</span><h4>Feeding the Future</h4><p>The mission in two minutes — the official overview film.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 7</span><h4>Feeding the Future</h4><p>The mission in two minutes: the official overview film.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </article>
       <article class="ep rv" data-delay="1">
-        <div class="ep-body"><span class="ep-num">Episode 8</span><h4>Restore the Water Cycles and Reverse Desertification</h4><p>Rodger Savory on re-wetting drylands — full video.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=UNOyzsmdMnI" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 8</span><h4>Restore the Water Cycles and Reverse Desertification</h4><p>Rodger Savory on re-wetting drylands: full video.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=UNOyzsmdMnI" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </article>
     </div>
   </div>
@@ -1028,27 +1030,27 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="faq">
       <div class="faq-item rv">
         <button class="faq-q">Won't the cattle get too hot and die in the desert?<span class="plus">+</span></button>
-        <div class="faq-a"><p>We use heat-adapted breeds already used to hot, dry desert, plus portable shade cloth and misters. Their welfare is the priority — healthy, happy cattle are the whole point, and we run mobile chicken units alongside them for shade and cooling.</p></div>
+        <div class="faq-a"><p>We use heat-adapted breeds already used to hot, dry desert, plus portable shade cloth and misters. Their welfare is the priority: healthy, happy cattle are the whole point, and we run mobile chicken units alongside them for shade and cooling.</p></div>
       </div>
       <div class="faq-item rv" data-delay="1">
         <button class="faq-q">How would you feed cattle in a desert?<span class="plus">+</span></button>
-        <div class="faq-a"><p>We grow biodiverse, soil-building forage nearby under irrigation, cut it, and compress it into silage or feed it fresh — trucked to the herd within 2–3 hours of cutting. It's the fermented forage that makes the meat healthy and begins regenerating the soil.</p></div>
+        <div class="faq-a"><p>We grow biodiverse, soil-building forage nearby under irrigation, cut it, and compress it into silage or feed it fresh, trucked to the herd within 2 to 3 hours of cutting. It's the fermented forage that makes the meat healthy and begins regenerating the soil.</p></div>
       </div>
       <div class="faq-item rv" data-delay="2">
         <button class="faq-q">Isn't methane from cattle bad for the planet?<span class="plus">+</span></button>
-        <div class="faq-a"><p>In a feedlot, yes — that's a broken system. When cattle move across living land the way nature intended, methane is part of a closed cycle and no additional methane is produced. A great read on the science: <a href="https://www.goodreads.com/book/show/8308645-should-meat-be-on-the-menu" target="_blank" rel="noopener" class="faq-link"><em>Should Meat Be on the Menu?</em></a></p></div>
+        <div class="faq-a"><p>In a feedlot, yes, that's a broken system. When cattle move across living land the way nature intended, methane is part of a closed cycle and no additional methane is produced. A great read on the science: <a href="https://www.goodreads.com/book/show/8308645-should-meat-be-on-the-menu" target="_blank" rel="noopener" class="faq-link"><em>Should Meat Be on the Menu?</em></a></p></div>
       </div>
       <div class="faq-item rv">
         <button class="faq-q">What exactly is a "biocarpet"?<span class="plus">+</span></button>
-        <div class="faq-a"><p>A term coined by Rodger Savory — Biocarpeting&copy;: a thick layer of dung and urine from livestock that shields soil from harmful UV, holds moisture for seed germination, and prevents evaporation. It's the warm, wet, dark environment that restarts the fungi and microbes desert sand is missing — the first step back to real soil.</p></div>
+        <div class="faq-a"><p>A term coined by Rodger Savory, Biocarpeting&copy;: a thick layer of dung and urine from livestock that shields soil from harmful UV, holds moisture for seed germination, and prevents evaporation. It's the warm, wet, dark environment that restarts the fungi and microbes desert sand is missing: the first step back to real soil.</p></div>
       </div>
       <div class="faq-item rv" data-delay="1">
         <button class="faq-q">Why is the Salton Sea 150,000-acre target significant?<span class="plus">+</span></button>
-        <div class="faq-a"><p>The Salton Sea sits between two mountain ranges and gets only 2–3 inches of rain a year. Calculations, observation and research show that greening at least 150,000 acres changes the micro water cycle — triggering 8–9 inches of rain a year, cooling the region, and replenishing aquifers.</p></div>
+        <div class="faq-a"><p>The Salton Sea sits between two mountain ranges and gets only 2 to 3 inches of rain a year. Calculations, observation and research show that greening at least 150,000 acres changes the micro water cycle, triggering 8 to 9 inches of rain a year, cooling the region, and replenishing aquifers.</p></div>
       </div>
       <div class="faq-item rv" data-delay="2">
         <button class="faq-q">Is this beef actually healthier?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Yes — independently lab-tested at Utah State University, Microbac Laboratories and the Health Research Institute. Fermented-forage-fed OBNB measures an 0.83:1 omega-6:3 ratio on the full fatty-acid panel, scores 44.4 (plasmalogens) and 53.6 (lysolecithins) on the HRI antioxidant/anti-inflammatory scale versus 25.0 and 23.2 for grain-fed, and carries 87 of 156 measured compound classes at significantly higher levels — up to 21,400% higher — with none of the oxidative toxins found in grain-fed beef and glyphosate effectively removed.</p></div>
+        <div class="faq-a"><p>Yes, independently lab-tested at Utah State University, Microbac Laboratories and the Health Research Institute. Fermented-forage-fed OBNB measures an 0.83:1 omega-6:3 ratio on the full fatty-acid panel, scores 44.4 (plasmalogens) and 53.6 (lysolecithins) on the HRI antioxidant/anti-inflammatory scale versus 25.0 and 23.2 for grain-fed, and carries 87 of 156 measured compound classes at significantly higher levels, up to 21,400% higher, with none of the oxidative toxins found in grain-fed beef and glyphosate effectively removed.</p></div>
       </div>
     </div>
   </div>
@@ -1061,7 +1063,7 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       <span class="mark">&ldquo;</span>
       <blockquote>&ldquo;Don&rsquo;t you want healthy children?&rdquo; Kennedy asked. The audience gave its answer with huge applause.</blockquote>
       <p class="lead">He said they&rsquo;d agreed on the importance for the country of safe food and ending the chronic disease epidemic.</p>
-      <cite>Robert F. Kennedy Jr. &amp; Donald J. Trump &mdash; Glendale, Arizona &middot; August 23, 2024</cite>
+      <cite>Robert F. Kennedy Jr. &amp; Donald J. Trump : Glendale, Arizona &middot; August 23, 2024</cite>
       <span class="src">via <a href="https://the-maha-report.substack.com" target="_blank" rel="noopener">The MAHA Report</a> &middot; Margaret Menge</span>
     </div>
   </div>
@@ -1072,12 +1074,12 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
   <div class="wrap">
     <div class="final-cta rv">
       <h2>Healthy meat. Healthy people.<br>Living land.</h2>
-      <p>Join the movement turning America's drylands back into grassland — one healthy, delicious steak at a time.</p>
+      <p>Join the movement turning America's drylands back into grassland, one healthy, delicious steak at a time.</p>
       <form class="sub-form">
         <input type="email" placeholder="Your email address" required aria-label="Email">
         <button type="submit">Get Updates</button>
       </form>
-      <p class="contact-line">Questions or licensing — <a href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a></p>
+      <p class="contact-line">Questions or licensing: <a href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a></p>
     </div>
   </div>
 </section>
@@ -1086,10 +1088,11 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
   <div class="foot-logo"><img src="assets/d2g-logo.png" alt="" style="height:36px;width:auto;vertical-align:middle;margin-right:.6rem">
     Deserts to Grasslands
   </div>
-  <p>Healthy meat &amp; good health — with the beautiful side effect of restoring deserts.<br>Contact: <a class="foot-email" href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a><br>Copyright © 2026 Deserts to Grasslands. All rights reserved.</p>
+  <p>Healthy meat &amp; good health, with the beautiful side effect of restoring deserts.<br>Contact: <a class="foot-email" href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a><br>Copyright © 2026 Deserts to Grasslands. All rights reserved.</p>
 </footer>
 
 <script>
+if(self!==top){top.location=self.location;}
 /* ===== scroll progress + nav state + theme ===== */
 const body=document.body, hdr=document.getElementById('hdr'), prog=document.getElementById('progress');
 const grassSections=['science','method','side','podcast','faq','join'];
@@ -1148,7 +1151,7 @@ document.querySelectorAll('[data-count]').forEach(c=>countIo.observe(c));
   const pin=document.querySelector('.pin');
   const heads=['The arid, broken land','Bare Earth Begins to hold Water after “Biocarpeting©”','Forage, fungi and life return','Living grassland. Green = water.'];
   const paras=[
-    'Bare desert. Crusted soil. No water cycle. This is where so much of America\u2019s drylands sit today — and where the cattle already live.',
+    'Bare desert. Crusted soil. No water cycle. This is where so much of America\u2019s drylands sit today, and where the cattle already live.',
     'Dung, urine and trampling break the crust. Rain now soaks in instead of running off. The ground starts to cool and hold moisture.',
     'Biodiverse forage is fermented and fed. Microbes, fungi and roots rebuild the soil beneath a growing mat of green.',
     'The micro water cycle restarts: more rain, cooler air, refilled aquifers. Desert has become grassland.'
