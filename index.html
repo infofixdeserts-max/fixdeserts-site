@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://i.ytimg.com data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://i.ytimg.com https://*.goatcounter.com data:; connect-src 'self' https://abacus.jasoncameron.dev https://gc.zgo.at https://*.goatcounter.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Deserts to Grasslands: Healthy Meat, Healthy People, Living Land</title>
@@ -267,7 +267,7 @@ section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relativ
 }
 .card:hover{transform:translateY(-8px)}
 .card .payoff{font-family:var(--font-display);font-weight:900;font-size:2.6rem;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block;margin-bottom:.4rem}
-.card h4{font-family:var(--font-display);font-size:1.35rem;margin-bottom:.6rem;font-weight:600}
+.card h3{font-family:var(--font-display);font-size:1.35rem;margin-bottom:.6rem;font-weight:600}
 .card p{font-size:.96rem;color:var(--ink-soft)}
 .card .ic{
   width:56px;height:56px;border-radius:16px;display:grid;place-items:center;margin-bottom:1.3rem;
@@ -339,7 +339,7 @@ section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relativ
 .timeline{max-width:760px;margin:0 auto}
 .tl-item{padding:0 0 1.4rem;border-bottom:1px solid rgba(92,58,40,.1)}
 .tl-item:last-child{border-bottom:none}
-.tl-body h4{font-family:var(--font-display);font-size:1.3rem;margin-bottom:.3rem}
+.tl-body h3{font-family:var(--font-display);font-size:1.3rem;margin-bottom:.3rem}
 .tl-body p{color:rgba(92,58,40,.75);line-height:1.55}
 
 /* ============ RODGER TEDx TALK (link to YouTube) ============ */
@@ -381,7 +381,7 @@ section{padding:clamp(4.5rem,9vw,8.5rem) clamp(1.2rem,5vw,4rem);position:relativ
   box-shadow:var(--shadow);transition:transform .4s var(--ease), box-shadow .4s var(--ease)}
 .ep:hover{transform:translateY(-3px);box-shadow:0 24px 50px -22px rgba(92,58,40,.28)}
 .ep-num{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text);font-weight:700}
-.ep-body h4{font-family:var(--font-display);font-size:1.15rem;line-height:1.22;margin:.25rem 0 .45rem;font-weight:600}
+.ep-body h3{font-family:var(--font-display);font-size:1.15rem;line-height:1.22;margin:.25rem 0 .45rem;font-weight:600}
 .ep-body p{font-size:.9rem;color:rgba(92,58,40,.74);line-height:1.5;margin-bottom:.7rem}
 .ep-cta{display:inline-flex;align-items:center;gap:.4rem;font-size:.9rem;font-weight:700;color:var(--accent-text);text-decoration:none;
   border:1.5px solid var(--accent-text);border-radius:999px;padding:.5rem 1.1rem;transition:.3s}
@@ -445,7 +445,8 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none}
 .faq-item.open .faq-a{max-height:440px}
 .faq-link{color:var(--accent-text);font-weight:600;text-decoration:underline}
 .contact-line{margin-top:1.3rem;font-size:.95rem;color:rgba(255,255,255,.92)}
-.contact-line a,.foot-email{color:#fff;font-weight:700;text-decoration:underline}
+.contact-line a{color:#fff;font-weight:700;text-decoration:underline}
+footer a{color:var(--ink);font-weight:700;text-decoration:underline}
 
 /* ============ TEAM ============ */
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
@@ -459,7 +460,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:none}
   box-shadow:0 14px 30px -12px rgba(224,123,95,.55);
 }
 .team .avatar svg{width:38px;height:38px}
-.team h4{font-family:var(--font-display);font-size:1.3rem}
+.team h3{font-family:var(--font-display);font-size:1.3rem}
 .team .role{color:var(--accent-text);font-size:.85rem;font-weight:600;letter-spacing:.05em;margin:.2rem 0 .8rem}
 .team p{font-size:.92rem;color:var(--ink-soft)}
 
@@ -524,12 +525,16 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
 <meta name="twitter:image" content="https://fixdeserts.com/assets/hero-poster.jpg">
 <link rel="canonical" href="https://fixdeserts.com/">
 <meta name="robots" content="index, follow">
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://fixdeserts.com/#organization", "name": "Deserts to Grasslands", "url": "https://fixdeserts.com/", "logo": "https://fixdeserts.com/assets/d2g-logo.png", "slogan": "Feeding the Future", "description": "Healthy meat and good health, with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.", "email": "infofixdeserts@gmail.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "@id": "https://fixdeserts.com/#website", "name": "Deserts to Grasslands", "url": "https://fixdeserts.com/", "description": "Healthy meat and good health, with the beautiful side effect of restoring deserts. Omega Balanced Meat beef regenerating soil and feeding people.", "inLanguage": "en", "publisher": {"@id": "https://fixdeserts.com/#organization"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Won't the cattle get too hot and die in the desert?", "acceptedAnswer": {"@type": "Answer", "text": "We use heat-adapted breeds already used to hot, dry desert, plus portable shade cloth and misters. Their welfare is the priority: healthy, happy cattle are the whole point, and we run mobile chicken units alongside them for shade and cooling."}}, {"@type": "Question", "name": "How would you feed cattle in a desert?", "acceptedAnswer": {"@type": "Answer", "text": "We grow biodiverse, soil-building forage nearby under irrigation, cut it, and compress it into silage or feed it fresh, trucked to the herd within 2 to 3 hours of cutting. It's the fermented forage that makes the meat healthy and begins regenerating the soil."}}, {"@type": "Question", "name": "Isn't methane from cattle bad for the planet?", "acceptedAnswer": {"@type": "Answer", "text": "In a feedlot, yes, that's a broken system. When cattle move across living land the way nature intended, methane is part of a closed cycle and no additional methane is produced. A great read on the science: Should Meat Be on the Menu?"}}, {"@type": "Question", "name": "What exactly is a \"biocarpet\"?", "acceptedAnswer": {"@type": "Answer", "text": "A term coined by Rodger Savory, Biocarpeting©: a thick layer of dung and urine from livestock that shields soil from harmful UV, holds moisture for seed germination, and prevents evaporation. It's the warm, wet, dark environment that restarts the fungi and microbes desert sand is missing: the first step back to real soil."}}, {"@type": "Question", "name": "Why is the Salton Sea 150,000-acre target significant?", "acceptedAnswer": {"@type": "Answer", "text": "The Salton Sea sits between two mountain ranges and gets only 2 to 3 inches of rain a year. Calculations, observation and research show that greening at least 150,000 acres changes the micro water cycle, triggering 8 to 9 inches of rain a year, cooling the region, and replenishing aquifers."}}, {"@type": "Question", "name": "Is this beef actually healthier?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, independently lab-tested at Utah State University, Microbac Laboratories and the Health Research Institute. Fermented-forage-fed OBNB measures an 0.83:1 omega-6:3 ratio on the full fatty-acid panel, scores 44.4 (plasmalogens) and 53.6 (lysolecithins) on the HRI antioxidant/anti-inflammatory scale versus 25.0 and 23.2 for grain-fed, and carries 87 of 156 measured compound classes at significantly higher levels, up to 21,400% higher, with none of the oxidative toxins found in grain-fed beef and glyphosate effectively removed."}}]}</script>
 </head>
 <body>
 <div id="progress"></div>
 
 <header id="hdr">
-  <a href="index.html" style="text-decoration:none;color:inherit"><div class="logo">
+  <a href="/" style="text-decoration:none;color:inherit"><div class="logo">
     <span class="mark"><img src="assets/d2g-logo.png" alt="Deserts to Grasslands" style="height:42px;width:auto;display:block"></span>
     <span>Deserts&nbsp;to&nbsp;Grasslands&nbsp;<small class="lg-sub">Feeding the Future</small></span>
   </div></a>
@@ -768,32 +773,32 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     <div class="grid">
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg></div>
-        <h4>Higher nutrition, by design</h4>
+        <h3>Higher nutrition, by design</h3>
         <p>A diet matched to the cell and metabolic intelligence of the animal: naturally prepared forages rich in carbohydrates and minerals, plus specialized fermentation that dramatically increases the nutrition available to the animal.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5-3 8-7.5 8-12a8 8 0 1 0-16 0c0 4.5 3 9 8 12z"/><path d="M9 10l2 2 4-4"/></svg></div>
-        <h4>Clean forages only</h4>
+        <h3>Clean forages only</h3>
         <p>Natural forages that are chemical free and non-GMO: no genetic engineering or modification, and glyphosate free.</p>
       </div>
       <div class="card rv" data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.5 5.5l13 13"/></svg></div>
-        <h4>Drug free. Fully.</h4>
+        <h3>Drug free. Fully.</h3>
         <p>No vaccinations (especially no mRNA-based vaccines), no steroids, no implants, and no antibiotics. Ever.</p>
       </div>
       <div class="card rv" data-delay="3">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9" opacity=".35"/></svg></div>
-        <h4>No seed oils. No grain oils.</h4>
+        <h3>No seed oils. No grain oils.</h3>
         <p>No seed oils or grain/vegetable oils in the ration, producing a balanced omega-6 to omega-3 ratio that is critical for cellular and metabolic health.</p>
       </div>
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l-2 7a4 4 0 0 1-8 0z"/><path d="M12 14v7M8 21h8"/></svg></div>
-        <h4>Chymostatin degraded by biology</h4>
+        <h3>Chymostatin degraded by biology</h3>
         <p>Chymostatin, the anti-nutrient that blocks chymotrypsin, the pancreas&#39; potent protein-digesting enzyme, is broken down by fermentation. Protein digestibility of the forage is optimized in the animal.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg></div>
-        <h4>Since 2006, refined 4 ways</h4>
+        <h3>Since 2006, refined 4 ways</h3>
         <p>Meat is a direct end-product of its diet. Grass-fed since creation, grain-finishing since the 1950s, and fermented-forage feeding since 2006: three diets, three very different meats.</p>
       </div>
     </div>
@@ -850,37 +855,37 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M4 22V8l6 5V8l8 8"/><path d="M18 22V12l2-2v12"/></svg></div>
         <div class="payoff">200%</div>
-        <h4>Feed efficiency</h4>
+        <h3>Feed efficiency</h3>
         <p>Fermented forage improves feed conversion by at least two-fold: less feed, faster growth, shorter time to market.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 14c3-3 8-3 11 1 2 2 4 2 5 .6"/><path d="M4 19c3-3 8-3 11 1 2 2 4 2 5 .6"/></svg></div>
         <div class="payoff">$8,000</div>
-        <h4>Per healthy animal</h4>
+        <h3>Per healthy animal</h3>
         <p>Higher margins for producers: $333/month revenue vs $188 for grass-fed: profitability without compromise.</p>
       </div>
       <div class="card rv" data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M12 5l-3-3M12 5l3-3M5 9l-3 3 3 3M19 9l3 3-3 3"/></svg></div>
         <div class="payoff">1.26:1</div>
-        <h4>Omega-6:3 balance</h4>
+        <h3>Omega-6:3 balance</h3>
         <p>The healthiest essential-fatty-acid ratio of any beef: tender, delicious, and genuinely good for you.</p>
       </div>
       <div class="card rv">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"/><path d="M18 21c0-4-3-6-6-6s-6 2-6 6"/><path d="M5 12h14" opacity=".5"/></svg></div>
         <div class="payoff">99.6%</div>
-        <h4>Less toxin load</h4>
+        <h3>Less toxin load</h3>
         <p>Fermentation remediates Roundup/glyphosate and pathogenic chemicals: cleaner meat, safer people.</p>
       </div>
       <div class="card rv" data-delay="1">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9" opacity=".4"/></svg></div>
         <div class="payoff">+21,400%</div>
-        <h4>Peak nutrition</h4>
+        <h3>Peak nutrition</h3>
         <p>Plasmalogens, lysolecithins, acylcarnitines and omega-3s at levels no other production system reaches.</p>
       </div>
       <div class="card rv" data-delay="2">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12H4M12 4v16"/><path d="M15 8l-3-3-3 3M15 16l-3 3-3-3" opacity=".5"/></svg></div>
         <div class="payoff">17 mo</div>
-        <h4>vs 24 mo</h4>
+        <h3>vs 24 mo</h3>
         <p>To market in 17 months versus 24 for grass-fed, on less than half the feed (4,195 lb vs 12,000 lb) with 14.3% feed retention vs 5%, while being the healthiest option.</p>
       </div>
     </div>
@@ -918,19 +923,19 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     </div>
     <div class="timeline">
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Ferment biodiverse forage</h4><p>Grasses and plants are cut, compressed, and fermented, boosting nutrition and neutralizing toxins before they're ever fed.</p></div>
+        <div class="tl-body"><h3>Ferment biodiverse forage</h3><p>Grasses and plants are cut, compressed, and fermented, boosting nutrition and neutralizing toxins before they're ever fed.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Feed it to the herd</h4><p>Healthy cattle thrive, growing faster with less feed, and their dung &amp; urine become the life-giving "biocarpet" on the soil.</p></div>
+        <div class="tl-body"><h3>Feed it to the herd</h3><p>Healthy cattle thrive, growing faster with less feed, and their dung &amp; urine become the life-giving "biocarpet" on the soil.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>The biocarpet works</h4><p>A thick layer of dung &amp; urine blocks the sun&#39;s sterilizing UV rays, holds moisture, and reseeds life: microbes, fungi, then grass roots.</p></div>
+        <div class="tl-body"><h3>The biocarpet works</h3><p>A thick layer of dung &amp; urine blocks the sun&#39;s sterilizing UV rays, holds moisture, and reseeds life: microbes, fungi, then grass roots.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Green = water</h4><p>Regenerated land cools itself and restarts the micro water cycle, raising rainfall, refilling aquifers, cooling whole valleys.</p></div>
+        <div class="tl-body"><h3>Green = water</h3><p>Regenerated land cools itself and restarts the micro water cycle, raising rainfall, refilling aquifers, cooling whole valleys.</p></div>
       </div>
       <div class="tl-item rv">
-        <div class="tl-body"><h4>Desert becomes grassland</h4><p>Exactly the side effect we're after: healthy food for people, and living, breathing land restored in the process.</p></div>
+        <div class="tl-body"><h3>Desert becomes grassland</h3><p>Exactly the side effect we're after: healthy food for people, and living, breathing land restored in the process.</p></div>
       </div>
     </div>
 
@@ -993,28 +998,28 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
     </div>
     <div class="ep-grid">
       <article class="ep rv">
-        <div class="ep-body"><span class="ep-num">Episode 1</span><h4>Turning Desert to Grassland and Feeding the Future</h4><p>How a desert plot became fertile grassland in one season.</p><a class="ep-cta" href="assets/podcast/ep1.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 1</span><h3>Turning Desert to Grassland and Feeding the Future</h3><p>How a desert plot became fertile grassland in one season.</p><a class="ep-cta" href="assets/podcast/ep1.mp3" target="_blank" rel="noopener">Play episode →</a></div>
       </article>
       <article class="ep rv" data-delay="1">
-        <div class="ep-body"><span class="ep-num">Episode 2</span><h4>Can Cooling Imperial Valley Cool Southern California?</h4><p>Regrowing vegetation to cool a region and shift the micro-climate.</p><a class="ep-cta" href="assets/podcast/ep2.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 2</span><h3>Can Cooling Imperial Valley Cool Southern California?</h3><p>Regrowing vegetation to cool a region and shift the micro-climate.</p><a class="ep-cta" href="assets/podcast/ep2.mp3" target="_blank" rel="noopener">Play episode →</a></div>
       </article>
       <article class="ep rv">
-        <div class="ep-body"><span class="ep-num">Episode 3</span><h4>Biochar, Carbon Sequestration &amp; the XPRIZE</h4><p>Carbon removal, biochar and what the XPRIZE really rewards.</p><a class="ep-cta" href="assets/podcast/ep3.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 3</span><h3>Biochar, Carbon Sequestration &amp; the XPRIZE</h3><p>Carbon removal, biochar and what the XPRIZE really rewards.</p><a class="ep-cta" href="assets/podcast/ep3.mp3" target="_blank" rel="noopener">Play episode →</a></div>
       </article>
       <article class="ep rv" data-delay="1">
-        <div class="ep-body"><span class="ep-num">Episode 4</span><h4>Feeding the Cattle in the Desert to Grasslands Project</h4><p>What the herd actually eats in the desert.</p><a class="ep-cta" href="assets/podcast/ep4.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 4</span><h3>Feeding the Cattle in the Desert to Grasslands Project</h3><p>What the herd actually eats in the desert.</p><a class="ep-cta" href="assets/podcast/ep4.mp3" target="_blank" rel="noopener">Play episode →</a></div>
       </article>
       <article class="ep rv">
-        <div class="ep-body"><span class="ep-num">Episode 5</span><h4>True Profit</h4><p>The economics of regreening: what really pays, at scale.</p><a class="ep-cta" href="assets/podcast/ep5.mp3" target="_blank" rel="noopener">Play episode →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 5</span><h3>True Profit</h3><p>The economics of regreening: what really pays, at scale.</p><a class="ep-cta" href="assets/podcast/ep5.mp3" target="_blank" rel="noopener">Play episode →</a></div>
       </article>
       <article class="ep rv" data-delay="1">
-        <div class="ep-body"><span class="ep-num">Episode 6</span><h4>Cows, Chickens, Microbes &amp; Fungi: How to Turn Deserts into Grasslands</h4><p>The full living toolkit working the soil back to life.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=OxpjG2IEroA" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 6</span><h3>Cows, Chickens, Microbes &amp; Fungi: How to Turn Deserts into Grasslands</h3><p>The full living toolkit working the soil back to life.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=OxpjG2IEroA" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </article>
       <article class="ep rv">
-        <div class="ep-body"><span class="ep-num">Episode 7</span><h4>Feeding the Future</h4><p>The mission in two minutes: the official overview film.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 7</span><h3>Feeding the Future</h3><p>The mission in two minutes: the official overview film.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=rb4ZYdmE4bY" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </article>
       <article class="ep rv" data-delay="1">
-        <div class="ep-body"><span class="ep-num">Episode 8</span><h4>Restore the Water Cycles and Reverse Desertification</h4><p>Rodger Savory on re-wetting drylands: full video.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=UNOyzsmdMnI" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+        <div class="ep-body"><span class="ep-num">Episode 8</span><h3>Restore the Water Cycles and Reverse Desertification</h3><p>Rodger Savory on re-wetting drylands: full video.</p><a class="ep-cta" href="https://www.youtube.com/watch?v=UNOyzsmdMnI" target="_blank" rel="noopener">Watch on YouTube →</a></div>
       </article>
     </div>
   </div>
@@ -1084,10 +1089,10 @@ footer p{font-size:.85rem;opacity:.75;margin-top:1rem}
 </section>
 
 <footer>
-  <div class="foot-logo"><img src="assets/d2g-logo.png" alt="" style="height:36px;width:auto;vertical-align:middle;margin-right:.6rem">
+  <div class="foot-logo"><img src="assets/d2g-logo.png" alt="Deserts to Grasslands" style="height:36px;width:auto;vertical-align:middle;margin-right:.6rem">
     Deserts to Grasslands
   </div>
-  <p>Healthy meat &amp; good health, with the beautiful side effect of restoring deserts.<br>Contact: <a class="foot-email" href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a><br>Copyright © 2026 Deserts to Grasslands. All rights reserved.</p>
+  <p>Healthy meat &amp; good health, with the beautiful side effect of restoring deserts.<br>Contact: <a class="foot-email" href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a><br>Copyright © 2026 Deserts to Grasslands. All rights reserved.<br><a href="privacy.html">Privacy</a></p>
 </footer>
 
 <script>
@@ -1195,5 +1200,7 @@ const nav=document.getElementById('nav'), burger=document.getElementById('burger
 burger.addEventListener('click',()=>nav.classList.toggle('open'));
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 </script>
+<script>window.SEO_OPS={ns:"fixdeserts.com",goatcounter:"https://fixdeserts.goatcounter.com/count",privacy:"/privacy.html",brand:"#1a9f66"}</script>
+<script src="/assets/seo.js" defer></script>
 </body>
 </html>

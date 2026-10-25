@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://i.ytimg.com https://*.goatcounter.com data:; connect-src 'self' https://abacus.jasoncameron.dev https://gc.zgo.at https://*.goatcounter.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy: What We Count | Deserts to Grasslands</title>
+<meta name="description" content="How fixdeserts.com counts visits: page views only, no cookies, no personal data, what the Accept button stores on your device, and how to opt out.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="canonical" href="https://fixdeserts.com/privacy.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Deserts to Grasslands">
+<meta property="og:title" content="Privacy: What We Count | Deserts to Grasslands">
+<meta property="og:description" content="How fixdeserts.com counts visits: page views only, no cookies, no personal data, what the Accept button stores on your device, and how to opt out.">
+<meta property="og:url" content="https://fixdeserts.com/privacy.html">
+<meta property="og:image" content="https://fixdeserts.com/assets/hero-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy: What We Count | Deserts to Grasslands">
+<meta name="twitter:description" content="How fixdeserts.com counts visits: page views only, no cookies, no personal data, what the Accept button stores on your device, and how to opt out.">
+<meta name="twitter:image" content="https://fixdeserts.com/assets/hero-poster.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Privacy: What We Count | Deserts to Grasslands", "url": "https://fixdeserts.com/privacy.html", "inLanguage": "en", "description": "How fixdeserts.com counts visits: page views only, no cookies, no personal data, what the Accept button stores on your device, and how to opt out.", "isPartOf": {"@type": "WebSite", "name": "Deserts to Grasslands", "url": "https://fixdeserts.com/"}}</script>
+<style>
+:root{
+  --brand-green:#1a9f66; --brand-green-bright:#0cc373; --brand-green-light:#8ff48e;
+  --brand-blue:#31a7ed; --brand-cyan:#52b5d4; --brand-yellow:#fdf650;
+  --brand-coral:#e07b5f; --brand-stone:#d8d8c8;
+  --ink:#3b2416; --paper:#d8d8c8; --fg:#3b2416;
+  --accent-text:#1a9f66;
+  --font-display:"Playfair Display",Georgia,serif;
+  --font-body:"Inter",-apple-system,"Segoe UI",sans-serif;
+  --radius:18px;
+  --shadow:0 20px 50px -24px rgba(92,58,40,.25);
+  --ease:cubic-bezier(.22,.9,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+em{font-style:normal;font-weight:700} i{font-style:normal} cite{font-style:normal}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--brand-stone);color:var(--fg);line-height:1.6;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+
+/* ===== HEADER (always in its scrolled state: this page has no photo hero) ===== */
+header{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;
+  padding:1rem clamp(1.2rem,5vw,4rem);background:rgba(216,216,200,.94);backdrop-filter:blur(14px);
+  box-shadow:0 10px 40px -20px rgba(92,58,40,.25)}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--ink);text-decoration:none}
+.logo .lg-sub{display:block;font-size:.42em;font-weight:700;letter-spacing:.34em;text-transform:uppercase;opacity:.75;margin-top:2px}
+.logo .mark{display:flex;align-items:center;flex:none}
+nav{display:flex;gap:1.6rem;align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:600;transition:.3s}
+nav a:hover,nav a.active{color:var(--accent-text)}
+nav a.cta{border:2px solid var(--accent-text);color:var(--accent-text);padding:.45rem 1.1rem;border-radius:999px}
+nav a.cta:hover{background:var(--accent-text);color:#fff}
+#burger{display:none;background:none;border:none;color:var(--ink);font-size:1.6rem;cursor:pointer;z-index:120}
+@media(max-width:820px){
+  #burger{display:block}
+  nav{position:fixed;top:0;right:-300px;width:300px;height:100vh;background:var(--brand-stone);
+    flex-direction:column;justify-content:center;gap:.9rem;transition:right .5s var(--ease);
+    box-shadow:-20px 0 60px -30px rgba(92,58,40,.4);z-index:110}
+  nav.open{right:0}
+  nav a{color:var(--ink)!important;font-size:1.15rem}
+}
+
+/* ===== DOCUMENT ===== */
+main.doc{max-width:780px;margin:0 auto;padding:clamp(2.5rem,6vw,4.5rem) clamp(1.2rem,5vw,4rem) 3rem}
+main.doc h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,5vw,2.9rem);line-height:1.12;margin-bottom:1rem}
+main.doc .lead{font-size:1.08rem;color:rgba(92,58,40,.85);margin-bottom:2.2rem}
+main.doc h2{font-family:var(--font-display);font-weight:600;font-size:1.45rem;margin:2rem 0 .6rem}
+main.doc p{margin-bottom:1rem;color:rgba(92,58,40,.86)}
+main.doc a{color:var(--accent-text);font-weight:700;text-decoration:underline}
+.badge{display:inline-block;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;font-weight:700;color:var(--accent-text);
+  border:1.5px solid var(--accent-text);border-radius:999px;padding:.35rem 1rem;margin-bottom:1.2rem}
+
+/* ===== FOOTER ===== */
+footer{padding:3rem clamp(1.2rem,5vw,4rem) 2.5rem;text-align:center;border-top:1px solid rgba(92,58,40,.14)}
+.foot-logo{font-family:var(--font-display);font-weight:600;font-size:1.4rem}
+footer p{font-size:.85rem;opacity:.75;margin-top:.8rem}
+footer a{color:var(--ink);font-weight:700;text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <a href="/" class="logo"><span class="mark"><img src="/assets/d2g-logo.png" alt="Deserts to Grasslands" style="height:42px;width:auto;display:block"></span>
+    <span>Deserts&nbsp;to&nbsp;Grasslands&nbsp;<small class="lg-sub">Feeding the Future</small></span>
+  </a>
+  <button id="burger" aria-label="Menu">&#9776;</button>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/#science">Science</a>
+    <a href="/#podcast">Podcast</a>
+    <a href="/resources.html">Resources</a>
+    <a href="/privacy.html" class="active">Privacy</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <span class="badge">Privacy</span>
+  <h1>Privacy: what we count</h1>
+  <p class="lead">This site counts how many people open each page. It does that with no cookies and no personal data. Here is what that means, in plain words.</p>
+
+  <h2>What this site counts</h2>
+  <p>We count page views. When your browser loads a page, one small request goes to a public counter and records three things: which page was opened, the date, and that one visit happened. Nothing else travels with it. We do not store your name, your email address, your IP address, or anything else about you. The counter keeps totals only, so every number you see is a sum of visits, never a record of a person.</p>
+
+  <h2>What the Accept button changes</h2>
+  <p>The banner at the bottom of the site has two buttons. Accept stores one flag in your browser, on this device only, that says you have already been here today. That flag lets us count repeat visits apart from first visits. It is not a cookie, it holds no personal data, and nothing identifying is sent with it.</p>
+
+  <h2>How to opt out</h2>
+  <p>Choose Essential only on the banner and nothing extra is stored. You can also clear this site's data in your browser settings at any time, or block counting scripts with a browser extension. The site works exactly the same either way: every page, link, video and form still does its job.</p>
+
+  <h2>What we never do</h2>
+  <p>We do not sell data, we do not run ads, and we do not build profiles of visitors. There is no account to create on this site and no login to remember. The count exists for one reason: to show us which pages people actually read, so we keep the useful ones current.</p>
+
+  <h2>Questions</h2>
+  <p>Questions about privacy or about the way this site counts visits can go to <a href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a>. We will answer in plain language.</p>
+</main>
+
+<footer>
+  <div class="foot-logo">Deserts to Grasslands</div>
+  <p>Feeding the Future · <a href="mailto:infofixdeserts@gmail.com">infofixdeserts@gmail.com</a></p>
+  <p>Copyright © 2026 Deserts to Grasslands. All rights reserved. · <a href="/">Home</a> · <a href="/resources.html">Resources</a></p>
+</footer>
+
+<script>
+if(self!==top){top.location=self.location;}
+const burger=document.getElementById('burger'), navEl=document.querySelector('nav');
+burger.addEventListener('click',()=>navEl.classList.toggle('open'));
+navEl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navEl.classList.remove('open')));
+</script>
+<script>window.SEO_OPS={ns:"fixdeserts.com",goatcounter:"https://fixdeserts.goatcounter.com/count",privacy:"/privacy.html",brand:"#1a9f66"}</script>
+<script src="/assets/seo.js" defer></script>
+</body>
+</html>
